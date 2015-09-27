@@ -12,7 +12,6 @@ semesters=['201008',
            '201408','201408',
            '201508','201501'
            ]
-semesters=['201508']
 
 semesterFolder='semesterData/'
 #if you add or subtract columns then you need to adjust the getClassList function accordingly
@@ -91,7 +90,7 @@ def getClassList(url):
 #Check that a semesters class list is downloaded, if not go and get it
 #If you want to re-download a semester (like for updated classes), then 
 #just delete that one in the local folder
-for thisSemester in semesters[0:1]:
+for thisSemester in semesters:
     dataFile=semesterFolder+thisSemester+'.csv'
     if os.path.exists(dataFile):
         print('Semester data file exists, skipping: ',dataFile)
