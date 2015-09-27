@@ -103,7 +103,16 @@ for thisSemester in semesters:
     semesterCourseList=pd.DataFrame(columns=columns)
     for thisDept in deptList:
         deptURL=semesterURL+thisDept
-        semesterCourseList=semesterCourseList.append( getClassList(deptURL), ignore_index=True)
+        try:
+            semesterCourseList=semesterCourseList.append( getClassList(deptURL), ignore_index=True)
+        #Continue on if it's just a 404 error, otherwise halt
+        except urllib.HTTPError as err:
+            if err.code ==404:
+                print('page not found', deptURL)
+                continue
+            else:
+                raise
+
     
     #write semester data frame
     semesterCourseList.to_csv(dataFile, index=False)
