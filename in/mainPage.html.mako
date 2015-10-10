@@ -92,9 +92,9 @@ $(document).ready(function() {
                         <tr>
                             <td>${thisClass['coursePrefix']}</td>
                             <td>${thisClass['courseNum']}</td>
-                            <td>${thisClass['numCredits']}</td>
-                            <td>${thisClass['courseName']}</td>
-                            <td>${thisClass['courseProf']}</td>
+                            <td>${thisClass['credits']}</td>
+                            <td>${thisClass['title']}</td>
+                            <td>${thisClass['prof']}</td>
                         </tr>
 % endfor
                     </tbody>
