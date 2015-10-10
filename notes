@@ -4,5 +4,10 @@ bootstrap/js editors
 
 
 todo
+        put Area Topic tag on classes
 	make csv for SNRE
-	make csv for more general depts like WEC, who can take any class in specific departments
+        make csv for WEC
+        go through and label unique classes so that classes vs sections of that class can be summarized
+		probably just match the class name, those are pretty unique
+
+        lookup history of a class in past schedules to see how often it's been offered
