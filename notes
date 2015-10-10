@@ -5,9 +5,16 @@ bootstrap/js editors
 
 todo
         put Area Topic tag on classes
-	make csv for SNRE
-        make csv for WEC
+	DONE make csv for SNRE
+        DONE make csv for WEC
         go through and label unique classes so that classes vs sections of that class can be summarized
 		probably just match the class name, those are pretty unique
 
         lookup history of a class in past schedules to see how often it's been offered
+
+	adding collapsable 'child rows'
+		https://datatables.net/examples/api/row_details.html
+
+        make classes searchable by comma sperated list of depts prefixes
+
+	make instructions file for classlists, adding terms, new majors, etc
