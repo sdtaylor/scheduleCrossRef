@@ -3,10 +3,11 @@ ALS,5156,Agricultural Ecology Principles & Applications
 EES,5305C,Ecological & General Systems
 PCB,5338,Principles of Ecosystem Ecology
 WIS,6934,Topics in Wildlife and Range Sciences: Wildlife Ecology and Management
-ZOO,6927,General Ecology
+PCB,4043C,General Ecology
 FAS,5901,Scientific Thinking in Ecology
 ANG,6086,Historical Ecology
-LAS,6290/ANT,Ethnoecology
+ANT,6930,Ethnoecology
+LAS,6290,Ethnoecology
 ALS,6932,Principles of Agroecology
 EES,5305C,Ecological & General Systems
 EES,6007,Advanced Energy and Environment
@@ -200,7 +201,8 @@ AEC,6313,From America to Zimbabwe: An Overview of International Extension System
 AEB,6933,Special Topics: Natural Resource and Environmental Policy
 ANG,6273,Legal Anthropology
 ANG,6274,Principles of Political Anthropology
-BOT,6927/LAW,Advances in Botany: Comparative Forest Management & Policy
+LAW,6930,Advances in Botany: Comparative Forest Management & Policy
+BOT,6927,Advances in Botany: Comparative Forest Management & Policy
 CPO,6795,Environmental Politics
 CPO,6796,Water Politics and Policy
 EES,5415,Environmental Healh
@@ -285,7 +287,7 @@ ANG,5352,Peoples of Africa
 ANG,6930,Special Topics in Anthropology: Plants and Culture
 LAH,5607,History of Amazonia
 LAH,5934,Topics in Latin American History: History of Nature in the Americas
-EVR,5705/ALS,Special Topics: Natural Resources and Innovation Systems
+EVR,5705,Natural Resource Mangement and Innovation Systems
 ABE,5643C,Biological Systems Modeling
 ABE,5707C,Agricultural Waste Management
 AEB,5167,Economic Analysis in Small Farm Livelihood Systems
@@ -342,8 +344,10 @@ LAS,6291,Conservation and Development Skills: Impact of Conservation and Develop
 LAS,6291,Conservation and Development Skills: Policy Reform in Conservation and Sustainable Development
 LAS,6938,Seminar in LAS: Amazon Seminar
 LAS,6938,Seminar in LAS: Tropical Resource
-LAS,6938/AFS,Foundations of Economics for Sustainable Development
-LAS,6938/ANG,Special Topics: Anthropology of Development in Latin America
+AFS,6905,Foundations of Economics for Sustainable Development
+LAS,6938,Foundations of Economics for Sustainable Development
+ANG,6930,Special Topics: Anthropology of Development in Latin America
+LAS,6938,Special Topics: Anthropology of Development in Latin America
 LAS,6940,Sustainable Development Practice
 LAW,6936,Environmental Justice Seminar
 LEI,6834,Ecotourism
@@ -372,7 +376,8 @@ WST,6935,"Selected Topics In Women's Studies: Gender, Development, and Globaliza
 EES,5415,Environmental Health
 EES,6405,Environmental Toxicology
 ENV,5105,Foundations of Air Pollution
-ENV,6215/6215L,Health Physics/Laboratory
+ENV,6215L,Health Physics/Laboratory
+ENV,6215,Health Physics/Laboratory
 PHC,6001,Principles of Epidemiology in Public Health
 PHC,6313,Environmental Health Concepts in Public Health
 PHC,6406,"Psychological, Behavioral, and Social Issues in Public Health"
