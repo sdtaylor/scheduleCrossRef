@@ -55,11 +55,11 @@
                 </dl>
                 <h3 style="display: block;">Majors</h3>
                 <ul style="display: block;"> 
-                    <li style="display: list-item;" class="majorList">
 % for thisMajor in majors:
+                    <li style="display: list-item;" class="majorList">
                         <a href="${thisMajor['name']}.html">${thisMajor['name']}</a>
-% endfor
                     </li>                     
+% endfor
                 </ul>
             </div>
         </div>         
@@ -68,4 +68,3 @@
     ================================================== -->
     </body>
 </html>
-

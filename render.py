@@ -17,6 +17,7 @@ thisTermSchedule=pd.read_csv(thisTerm['termSchedule'])
 #Load template file for majors
 template=mako.template.Template(filename=majorTemplate)
 
+#render the major pages one at a time.
 for thisMajor in majors:
     #Get list of this majors classes. Drop any duplicates that show up for whatever reason
     classList=pd.read_csv(thisMajor['classFile']) 
@@ -34,4 +35,7 @@ for thisMajor in majors:
     with open(page, 'w') as f:
         f.write(template.render(classes=crossRef, thisMajor=thisMajor))
     
-
+#render the index page
+template=mako.template.Template(filename='in/index.html.mako')
+with open('www/index.html', 'w') as f:
+    f.write(template.render(majors=majors))
