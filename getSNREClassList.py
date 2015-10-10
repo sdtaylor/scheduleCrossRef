@@ -30,6 +30,25 @@ for sub in pageSoup.find_all(isSubCatagory):
     for classListing in sub.find_all(isClassListing):
         classEntry={}
         classListing=classListing.find_all('td')
+
+        #Some one off entries that need special handling
+        if '6215L' in classListing[0].get_text():
+            classListing[0].string='ENV 6215/ENV 6215L'
+        if '4043C' in classListing[0].get_text():
+            classListing[0].string='PCB 4043C'
+        #Some entries have two course numbers for one class, seperated by a /
+        #If thats the case, put the 2nd on in the list, then take it out and add
+        #the first one as normal
+        if '/' in classListing[0].get_text():
+            #Add the 2nd entry to the list
+            secondEntry={}
+            secondEntry['coursePrefix']=classListing[0].get_text().split('/')[1].split(' ')[0]
+            secondEntry['courseNum']=classListing[0].get_text().split('/')[1].split(' ')[1]
+            secondEntry['title']=classListing[1].get_text()
+            classList=classList.append(secondEntry, ignore_index=True)
+            #Remove the 2nd entry so the 1st gets added below
+            classListing[0].string=classListing[0].get_text().split('/')[0]
+
         classEntry['coursePrefix']=classListing[0].get_text().split(' ')[0]
         classEntry['courseNum']=classListing[0].get_text().split(' ')[1]
         classEntry['title']=classListing[1].get_text()
