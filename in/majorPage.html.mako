@@ -8,10 +8,10 @@
         <meta name="author" content="">
         <title>Simpler UF Grad Student Schedule</title>
         <!-- Bootstrap core CSS + datables integration -->
-	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">
         <!-- Custom styles for this template -->
-        <link href="navbar.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
         <!-- JS libraries for bootstrap and datatables -->
 	<script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
@@ -34,44 +34,15 @@ $(document).ready(function() {
             <!-- Static navbar -->
             <div class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="#" style="display: block;">A Simple UF Grad Student Schedule</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav" style="display: block;" data-pg-collapsed>
+                    <ul class="nav navbar-nav" style="display: block;">
                         <li class="active">
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-</li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Majors&nbsp;<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                                <li>
-                                    <a href="#">One more separated link</a>
-                                </li>
-                            </ul>
+                            <a href="index.html">Home</a>
                         </li>
                     </ul>
+                    <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>${thisMajor['name']} Spring 2016</b></a>
                 </div>
                 <!--/.nav-collapse -->
             </div>

@@ -32,6 +32,6 @@ for thisMajor in majors:
 
     #Write it out!
     with open(page, 'w') as f:
-        f.write(template.render(classes=crossRef))
+        f.write(template.render(classes=crossRef, thisMajor=thisMajor))
     
 
