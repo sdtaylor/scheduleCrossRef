@@ -1,5 +1,6 @@
+currentTermName='201601'
 
-currentTerm='201601'
+majorTemplate='in/majorPage.html.mako'
 
 majors=[
      {'name': 'SNRE', 'classFile': 'majorClassLists/SNREList.csv', 'asof': 'Oct 10,2015'},
