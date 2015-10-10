@@ -2,19 +2,10 @@ import urllib.request as urllib
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os.path
+from config import *
 
 baseURL='http://www.registrar.ufl.edu/soc/'
-#Semesters are yyyy + 08 for spring, 01 for fall, 06 for summer
-semesters=['201008',
-           '201108','201101',
-           '201208','201201',
-           '201308','201301',
-           '201408','201401',
-           '201508','201501',
-           '201601'
-           ]
 
-semesterFolder='semesterData/'
 #if you add or subtract columns then you need to adjust the getClassList function accordingly
 #xxxx2 are for when there is a 2nd row with more schedule info. For labs, meeting times in different buildings, etc.
 columns=['coursePrefix','courseNum','fee','section','credits','days','times','building','room','title','prof',
@@ -91,15 +82,15 @@ def getClassList(url):
 #Check that a semesters class list is downloaded, if not go and get it
 #If you want to re-download a semester (like for updated classes), then 
 #just delete that one in the local folder
-for thisSemester in semesters:
-    dataFile=semesterFolder+thisSemester+'.csv'
+for thisSemester in terms:
+    dataFile=thisSemester['termSchedule']
     if os.path.exists(dataFile):
         print('Semester data file exists, skipping: ',dataFile)
         continue
 
     #Get all the dept subpages of schedules, process each and add to
     #a large dataframe for this semester.
-    semesterURL=baseURL+thisSemester+'/all/'
+    semesterURL=baseURL+thisSemester['name']+'/all/'
     deptList=getDepts(semesterURL)
     semesterCourseList=pd.DataFrame(columns=columns)
     for thisDept in deptList:
