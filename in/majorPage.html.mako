@@ -24,7 +24,10 @@
 	<script type="text/javascript" class="init">
 
 $(document).ready(function() {
-	$('#maintable').DataTable();
+	$('#maintable').DataTable({
+	"paging": false,
+	"info": false
+});
 } );
 
 	</script>
