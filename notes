@@ -21,3 +21,10 @@ todo
         make classes searchable by comma sperated list of depts prefixes
 
 	make instructions file for classlists, adding terms, new majors, etc
+
+	deal with special topcis better, there are just too many in the SNRE list
+		a word search maybe?
+		by hand?
+
+	add a full schedule option
+		need to do this after make the prefixes searchable
