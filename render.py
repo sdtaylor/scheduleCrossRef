@@ -2,6 +2,7 @@ import mako.template
 import pandas as pd
 import json
 from config import *
+from findHistory import *
 
 #schedule=pd.read_csv('SNRE2016.csv')
 #x=schedule.to_dict('records')
@@ -27,7 +28,19 @@ for thisMajor in majors:
 
     #Cross reference it with the main schedule for this term using an inner merge, where only 
     #entries that are in both lists are used. Then make it a dictionary to pass to the template engine.
-    crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('').to_dict('records')
+    crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('')
+    #crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('').to_dict('records')
+
+    #Get history of when all the classes have been offered
+    history=[]
+    for thisClass in crossRef['title'].values.tolist():
+        history.append(getPriorTerms(thisClass))
+    history=pd.DataFrame(history, index=crossRef.index)
+
+    #Add the history to the rest of the info, and convert it to a dict for passing to web object
+    crossRef=crossRef.join(history).to_dict('records')
+
+
 
     #major html page
     page='www/'+thisMajor['name']+'.html'
