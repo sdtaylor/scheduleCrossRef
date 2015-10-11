@@ -29,7 +29,6 @@ for thisMajor in majors:
     #Cross reference it with the main schedule for this term using an inner merge, where only 
     #entries that are in both lists are used. Then make it a dictionary to pass to the template engine.
     crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('')
-    #crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('').to_dict('records')
 
     #Get history of when all the classes have been offered
     history=[]
