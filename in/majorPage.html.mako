@@ -52,6 +52,15 @@ function format ( d ) {
 	    '<td>'+d.building+' '+d.room+'</td>'+
 	    '<td>'+d.lastSeen+'</td>'+
         '</tr>'+
+        '<tr>'+
+            '<td></td>'+
+            '<td></td>'+
+            '<td></td>'+
+            '<td>'+d.days2+'</td>'+
+            '<td>'+d.times2+'</td>'+
+	    '<td>'+d.building2+' '+d.room2+'</td>'+
+	    '<td></td>'+
+        '</tr>'+
     '</table>';
 }
 
