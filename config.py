@@ -40,5 +40,6 @@ specialTopicClasses=['ZOO6927',
                      'FAS6932',
                      'AGR6932',
                      'BOT6935',
+                     'ANG6930',
                      'MAT6932'
                      ]
