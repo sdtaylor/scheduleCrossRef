@@ -9,10 +9,11 @@ todo
         DONE make csv for WEC
         go through and label unique classes so that classes vs sections of that class can be summarized
 		probably just match the class name, those are pretty unique
+	-I probably won't do this, just listing all the sections and the expandable details is fine
 
         lookup history of a class in past schedules to see how often it's been offered
 
-	adding collapsable 'child rows'
+	DONE adding collapsable 'child rows'
 		https://datatables.net/examples/api/row_details.html
 
         make classes searchable by comma sperated list of depts prefixes

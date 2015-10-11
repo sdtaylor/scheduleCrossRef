@@ -26,14 +26,25 @@
 /* Formatting function for row details - modify as you need */
 function format ( d ) {
     // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+    return '<table cellpadding="20" cellspacing="10" border="0" style="padding-left:150px;">'+
+	    '<col width="100px" />'+
+	    '<col width="100px" />'+
+	    '<col width="100px" />'+
+	    '<col width="100px" />'+
+	    '<col width="100px" />'+
         '<tr>'+
-            '<td>Building:</td>'+
-            '<td>'+d.building+'</td>'+
+            '<td></td>'+
+	    '<td><span style="text-decoration:underline;">Fee</span></td>'+
+	    '<td><span style="text-decoration:underline;">Days</span></td>'+
+	    '<td><span style="text-decoration:underline;">Periods</span></td>'+
+	    '<td><span style="text-decoration:underline;">Where</span></td>'+
         '</tr>'+
         '<tr>'+
-            '<td>Section:</td>'+
-            '<td>'+d.section+'</td>'+
+            '<td></td>'+
+            '<td>'+d.fee+'</td>'+
+            '<td>'+d.days+'</td>'+
+            '<td>'+d.times+'</td>'+
+	    '<td>'+d.building+' '+d.room+'</td>'+
         '</tr>'+
     '</table>';
 }
@@ -53,6 +64,7 @@ $(document).ready(function() {
             },
 	{ "data" :"coursePrefix"},
 	{ "data": "courseNum"},
+	{ "data": "section"},
 	{ "data": "credits"},
 	{ "data": "title"},
 	{ "data": "prof"}
@@ -106,22 +118,12 @@ $(document).ready(function() {
                             <th></th>
                             <th>Dept</th>
                             <th>Number</th>
+                            <th>Section</th>
                             <th>Credits</th>
                             <th>Name</th>
                             <th>Professors</th>
                         </tr>
                     </thead>
-                    <tbody>
-% for thisClass in classes:
-                        <tr>
-                            <td>${thisClass['coursePrefix']}</td>
-                            <td>${thisClass['courseNum']}</td>
-                            <td>${thisClass['credits']}</td>
-                            <td>${thisClass['title']}</td>
-                            <td>${thisClass['prof']}</td>
-                        </tr>
-% endfor
-                    </tbody>
                 </table>
             </div>
         </div>         
