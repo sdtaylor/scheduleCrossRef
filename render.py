@@ -37,11 +37,18 @@ for thisMajor in majors:
     history=pd.DataFrame(history, index=crossRef.index)
 
     #Add the history to the rest of the info, and convert it to a dict for passing to web object
-    crossRef=crossRef.join(history).to_dict('records')
+    crossRef=crossRef.join(history)
 
+    #Check to see if classes are special topic classes
+    crossRef['specialTopic']='No'
+    for index, row in crossRef.iterrows():
+        if ''.join(row[['coursePrefix','courseNum']].values.tolist()) in specialTopicClasses:
+                row['specialTopic']='Yes'
 
+    #Convert to dictionary for dumping out as json object
+    crossRef=crossRef.to_dict('records')
 
-    #major html page
+    #this majors html page name
     page='www/'+thisMajor['name']+'.html'
 
     #Write it out!

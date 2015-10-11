@@ -49,7 +49,7 @@
                     <dt style="display: block;">Some notes</dt> 
                     <dd style="display: block;">
                         <ul data-pg-collapsed=""> 
-                            <li>Special Topic classes share a common course number (like ZOO 6927), so are annoying to cross rerference. So every special topic class will be listed for a department and be marked. Most are fair game anyway if you petition to take it.</li>                             
+                            <li>Special Topic classes share a common course number (like ZOO 6927), so are annoying to cross rerference. So every special topic class will be listed for a department and be marked with Special Topic:Yes in the info. They may not be on the official curriculum, but most are fair game anyway if you petition to take it.</li>                             
                         </ul>
                     </dd>                     
                 </dl>

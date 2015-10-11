@@ -27,15 +27,17 @@
 function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="20" cellspacing="10" border="0" style="padding-left:150px;">'+
+	    '<col width="70px" />'+
+	    '<col width="50px" />'+
 	    '<col width="100px" />'+
-	    '<col width="100px" />'+
-	    '<col width="100px" />'+
+	    '<col width="70px" />'+
 	    '<col width="100px" />'+
 	    '<col width="100px" />'+
 	    '<col width="500px" />'+
         '<tr>'+
             '<td></td>'+
 	    '<td><span style="text-decoration:underline;">Fee</span></td>'+
+	    '<td><span style="text-decoration:underline;">Special Topics</span></td>'+
 	    '<td><span style="text-decoration:underline;">Days</span></td>'+
 	    '<td><span style="text-decoration:underline;">Periods</span></td>'+
 	    '<td><span style="text-decoration:underline;">Where</span></td>'+
@@ -44,6 +46,7 @@ function format ( d ) {
         '<tr>'+
             '<td></td>'+
             '<td>'+d.fee+'</td>'+
+            '<td>'+d.specialTopic+'</td>'+
             '<td>'+d.days+'</td>'+
             '<td>'+d.times+'</td>'+
 	    '<td>'+d.building+' '+d.room+'</td>'+

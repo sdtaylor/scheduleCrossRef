@@ -21,3 +21,24 @@ terms=[
      {'name' :'201101', 'prettyName':'Spring 2011', 'termSchedule': 'semesterData/201101.csv'}, 
      {'name' :'201008', 'prettyName':'Fall 2010', 'termSchedule': 'semesterData/201008.csv'} 
 ]
+
+#Every dept has 'Special Topic' codes that we may need to petition to take.
+#Theres probably a better way to do this. maybe scrap the grad catalog website
+specialTopicClasses=['ZOO6927',
+                     'WIS6934',
+                     'ALS5932',
+                     'AOM6932',
+                     'AEC6932',
+                     'STA6934',
+                     'ANS6932',
+                     'ENY6932',
+                     'NEM6932',
+                     'AEB6933',
+                     'HOS6932',
+                     'MCB6937',
+                     'PBC6937',
+                     'FAS6932',
+                     'AGR6932',
+                     'BOT6935',
+                     'MAT6932'
+                     ]
