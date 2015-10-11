@@ -32,12 +32,14 @@ function format ( d ) {
 	    '<col width="100px" />'+
 	    '<col width="100px" />'+
 	    '<col width="100px" />'+
+	    '<col width="500px" />'+
         '<tr>'+
             '<td></td>'+
 	    '<td><span style="text-decoration:underline;">Fee</span></td>'+
 	    '<td><span style="text-decoration:underline;">Days</span></td>'+
 	    '<td><span style="text-decoration:underline;">Periods</span></td>'+
 	    '<td><span style="text-decoration:underline;">Where</span></td>'+
+	    '<td><span style="text-decoration:underline;">Last Offered</span></td>'+
         '</tr>'+
         '<tr>'+
             '<td></td>'+
@@ -45,6 +47,7 @@ function format ( d ) {
             '<td>'+d.days+'</td>'+
             '<td>'+d.times+'</td>'+
 	    '<td>'+d.building+' '+d.room+'</td>'+
+	    '<td>'+d.lastSeen+'</td>'+
         '</tr>'+
     '</table>';
 }
@@ -67,7 +70,8 @@ $(document).ready(function() {
 	{ "data": "section"},
 	{ "data": "credits"},
 	{ "data": "title"},
-	{ "data": "prof"}
+	{ "data": "prof"},
+	{ "data": "frequency"}
         ],
         "order": [[1, 'asc']]
     } );
@@ -122,6 +126,7 @@ $(document).ready(function() {
                             <th>Credits</th>
                             <th>Name</th>
                             <th>Professors</th>
+                            <th>Frequency</th>
                         </tr>
                     </thead>
                 </table>

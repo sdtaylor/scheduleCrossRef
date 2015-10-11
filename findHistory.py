@@ -45,7 +45,7 @@ def getPriorTerms(title):
 
     freq=len(prettyNames)/numTermHistory*1.0
     if freq == 1.0:
-        lastSeen=' '
+        lastSeen='Every Semester'
     else:
         lastSeen=','.join(prettyNames)
     return( {'frequency': getFrequencyWords(freq),
