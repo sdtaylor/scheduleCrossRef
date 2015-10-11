@@ -8,3 +8,11 @@
     font-size: 24px;
     font-weight: bold;
 }
+
+td.details-control {
+    background: url('plus.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('minus.png') no-repeat center center;
+}

@@ -1,5 +1,6 @@
 import mako.template
 import pandas as pd
+import json
 from config import *
 
 #schedule=pd.read_csv('SNRE2016.csv')
@@ -26,7 +27,7 @@ for thisMajor in majors:
 
     #Cross reference it with the main schedule for this term using an inner merge, where only 
     #entries that are in both lists are used. Then make it a dictionary to pass to the template engine.
-    crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').to_dict('records')
+    crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('').to_dict('records')
 
     #major html page
     page='www/'+thisMajor['name']+'.html'
@@ -34,6 +35,12 @@ for thisMajor in majors:
     #Write it out!
     with open(page, 'w') as f:
         f.write(template.render(classes=crossRef, thisMajor=thisMajor))
+
+
+    crossRef={'data' : crossRef}
+    objectFile='www/'+thisMajor['name']+'objects.txt'
+    with open(objectFile, 'w') as f:
+        json.dump(crossRef, f, indent=4)
     
 #render the index page
 template=mako.template.Template(filename='in/index.html.mako')

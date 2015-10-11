@@ -23,12 +23,61 @@
     <![endif]-->
 	<script type="text/javascript" class="init">
 
+/* Formatting function for row details - modify as you need */
+function format ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Building:</td>'+
+            '<td>'+d.building+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Section:</td>'+
+            '<td>'+d.section+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+
 $(document).ready(function() {
-	$('#maintable').DataTable({
+    var table = $('#maintable').DataTable( {
 	"paging": false,
-	"info": false
-});
+	"info": false,
+	"ajax": "${thisMajor['name']}objects.txt",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "width":           "5%",
+                "defaultContent": ''
+            },
+	{ "data" :"coursePrefix"},
+	{ "data": "courseNum"},
+	{ "data": "credits"},
+	{ "data": "title"},
+	{ "data": "prof"}
+        ],
+        "order": [[1, 'asc']]
+    } );
+     
+    // Add event listener for opening and closing details
+    $('#maintable').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
 } );
+
 
 	</script>
     </head>
@@ -54,6 +103,7 @@ $(document).ready(function() {
                 <table id="maintable" class="table"> 
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Dept</th>
                             <th>Number</th>
                             <th>Credits</th>
