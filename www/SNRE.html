@@ -23,7 +23,7 @@
     <![endif]-->
 	<script type="text/javascript" class="init">
 
-/* Formatting function for row details - modify as you need */
+/* Formatting function for expandable row info */
 function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="20" cellspacing="10" border="0" style="padding-left:150px;">'+
@@ -64,6 +64,7 @@ function format ( d ) {
     '</table>';
 }
 
+//DataTables declaration
 $(document).ready(function() {
     var table = $('#maintable').DataTable( {
 	"paging": false,
@@ -88,7 +89,7 @@ $(document).ready(function() {
         "order": [[1, 'asc']]
     } );
      
-    // Add event listener for opening and closing details
+    // event listener for opening and closing expandable rows
     $('#maintable').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = table.row( tr );
@@ -124,9 +125,8 @@ $(document).ready(function() {
                     </ul>
                     <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>SNRE Spring 2016</b></a>
                 </div>
-                <!--/.nav-collapse -->
             </div>
-            <!-- Main component for a primary marketing message or call to action -->
+            <!-- Main table section -->
             <div class="container">
                 <table id="maintable" class="table"> 
                     <thead>
@@ -145,8 +145,6 @@ $(document).ready(function() {
             </div>
         </div>         
         <!-- /container -->
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
     </body>
     <footer>
 	    <script>
