@@ -62,5 +62,6 @@ specialTopicClasses=['ZOO6927',
                      'ENV6935',
                      'FOR6934',
                      'MAT6932',
+                     'LAW6930',
                      'VME6934'
                      ]
