@@ -67,6 +67,11 @@ for sub in pageSoup.find_all(isSubCatagory):
         classEntry['title']=classListing[1].get_text()
         classEntry['subCategory']=thisSubCategory
 
+        #Do not use law school classes. There is a ton of them and no ecology student should
+        #be taking law classes anyway
+        if classEntry['coursePrefix']=='LAW':
+            break
+
         classList=classList.append(classEntry, ignore_index=True)
 
 classList.to_csv(classListFile, index=False)
