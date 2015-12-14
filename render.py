@@ -23,7 +23,7 @@ template=mako.template.Template(filename=majorTemplate)
 for thisMajor in majors:
     #Get list of this majors classes. Drop any duplicates that show up for whatever reason
     classList=pd.read_csv(thisMajor['classFile']) 
-    classList=classList[['coursePrefix','courseNum']]
+    classList=classList[['coursePrefix','courseNum','subCategory']]
     classList.drop_duplicates(inplace=True)
 
     #Cross reference it with the main schedule for this term using an inner merge, where only 
