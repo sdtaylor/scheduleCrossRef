@@ -2,9 +2,10 @@ import urllib.request as urllib
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os.path
+from config import *
 
 baseURL='http://snre.ufl.edu/graduate/curriculum.htm'
-classListFile='SNREList.csv'
+classListFile='majorClassLists/WECList.csv'
 
 #Only run if this datafile doesn't exist
 if os.path.exists(classListFile):
