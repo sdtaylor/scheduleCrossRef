@@ -5,7 +5,7 @@ import os.path
 from config import *
 
 baseURL='http://snre.ufl.edu/graduate/curriculum.htm'
-classListFile='majorClassLists/WECList.csv'
+classListFile='majorClassLists/SNREList.csv'
 
 #Only run if this datafile doesn't exist
 if os.path.exists(classListFile):
