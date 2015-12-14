@@ -23,10 +23,22 @@ def isSubCatagory(tag):
 def isClassListing(tag):
     return tag.name=='tr' and len(tag.find_all('td'))>2
 
-classList=pd.DataFrame(columns=['coursePrefix','courseNum','title'])
+classList=pd.DataFrame(columns=['coursePrefix','courseNum','title','subCategory'])
 
 #
+#Setup subcategories with curriculum. 
+subCategoryList=['Principles of Ecology',
+        'Particular Systems',
+        'Natural Science',
+        'Social Science',
+        'Sustainability',
+        'Research & Design']
+
+
+subCategoryCount=0
 for sub in pageSoup.find_all(isSubCatagory):
+    thisSubCategory=subCategoryList[subCategoryCount]
+    subCategoryCount+=1
     for classListing in sub.find_all(isClassListing):
         classEntry={}
         classListing=classListing.find_all('td')
@@ -52,6 +64,7 @@ for sub in pageSoup.find_all(isSubCatagory):
         classEntry['coursePrefix']=classListing[0].get_text().split(' ')[0]
         classEntry['courseNum']=classListing[0].get_text().split(' ')[1]
         classEntry['title']=classListing[1].get_text()
+        classEntry['subCategory']=thisSubCategory
 
         classList=classList.append(classEntry, ignore_index=True)
 
