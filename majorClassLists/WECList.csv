@@ -1,141 +1,141 @@
-coursePrefix,courseNum,subCategory
-AGR,6311
-BOT,5685C
-BOT,5695
-BOT,5655C
-BOT,5725C
-EES,5305C
-EES,5307
-EES,5315
-EES,6140
-EES,6308C
-EES,6356
-ENY,6203
-ENY,6203L
-ENY,6454
-FAS,5276C
-FAS,5901
-FOR,5159
-FOR,6170
-PCB,5046C
-PCB,5307C
-PCB,5338
-PCB,5356
-PCB,5415C
-PCB,5615
-PCB,6377C
-PCB,6049
-PCB,6447C
-PCB,6496C
-PCB,6605C
-PCB,6695
-SOS,5303C
-SOS,6323
-WIS,5496
-WIS,5521
-WIS,5555C
-WIS,6444
-WIS,6452
-WIS,6466
-WIS,6468C
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-WIS,6934
-ZOO,5486C
-ZOO,6005
-ZOO,6406
-ZOO,6456C
-ZOO,6515C
-ZOO,6542
-ZOO,6931
-ADV,6602
-AEB,6106
-AEB,6453
-AEB,6483
-AEB,6645
-AEE,5060
-AEE,5454
-AEE,6300
-AEE,6512
-ANG,5702
-CPO,6307
-CPO,6091
-ECO,7716
-EES,6009
-EES,6318
-EME,6945
-ENV,5075
-FNR,5072C
-FOR,5615
-FOR,6005
-FOR,6543
-FOR,6268
-FOR,6665
-GEA,6468
-GEA,6468L
-LAA,6382
-LAS,6290
-LAS,6291
-LEI,6895
-MMC,6400
-POS,6157
-PUR,6607
-SCE,6290
-SOS,5235
-SUR,6427
-URP,6061
-URP,6341
-URP,6601
-WIS,6544
-WIS,6525
-WIS,6543
-WIS,6578
-AEB,5167
-ALS,5932
-ANG,5485
-CAP,5805
-ECO,7415
-ECO,7408
-EDF,6401
-EDF,6403
-EES,6026C
-EES,6028
-EES,6301
-FOR,5435
-GIS,5028C
-GIS,5107C
-GIS,5306
-MAP,6487
-MAP,6488
-MMC,6421
-MTG,5412
-PCB,5459
-PCB,6555
-POS,6757
-STA,5325
-STA,5503
-STA,5701
-STA,6166
-STA,6167
-STA,6207
-STA,6209
-STA,6505
-SUR,5385
-SUR,5625
-SUR,6395
-URP,6271
-WIS,5496
-WIS,6455
-WIS,6466
-ZOO,6308
-WIS,6468C
-WIS,6934
-WIS,6934
+coursePrefix,courseNum,title,subCategory
+AGR,6311,"Population Genetics",Ecology
+BOT,5685C,"Tropical Botany",Ecology
+BOT,5695,"Ecosystems of Florida",Ecology
+BOT,5655C,"Physiological Plant Ecology",Ecology
+BOT,5725C,"Taxonomy of Vascular Plants",Ecology
+EES,5305C,"Ecological and General Systems",Ecology
+EES,5307,"Ecological Engineering",Ecology
+EES,5315,"Ecology and the Environment",Ecology
+EES,6140,"Biology of Exotic Species",Ecology
+EES,6308C,"Wetland Ecology",Ecology
+EES,6356,"Estuarine Systems",Ecology
+ENY,6203,"Insect Ecology",Ecology
+ENY,6203L,"Insect Ecology Lab",Ecology
+ENY,6454,"Behavioral Ecology and Systematics of Insects",Ecology
+FAS,5276C,"Field Ecology of Aquatic Organisms",Ecology
+FAS,5901,"Scientific Thinking in Ecology",Ecology
+FOR,5159,"Ecology and Restoration of Longleaf Pine Ecosystems",Ecology
+FOR,6170,"Tropical Forestry",Ecology
+PCB,5046C,"Advanced Ecology",Ecology
+PCB,5307C,Limnology,Ecology
+PCB,5338,"Principles of Ecosystem Ecology",Ecology
+PCB,5356,"Tropical Ecology",Ecology
+PCB,5415C,"Behavioral Ecology",Ecology
+PCB,5615,"Molecular Evolution and Systematics",Ecology
+PCB,6377C,"Physiological Ecology of Vertebrates",Ecology
+PCB,6049,"Seminar in Ecology",Ecology
+PCB,6447C,"Community Ecology",Ecology
+PCB,6496C,"Stream Ecology",Ecology
+PCB,6605C,"Principles of Systematic Biology",Ecology
+PCB,6695,"Seminar in Evolutionary Biology",Ecology
+SOS,5303C,"Soil Microbial Ecology",Ecology
+SOS,6323,"Advanced Microbial Ecology",Ecology
+WIS,5496,"Research Design in Wildlife Ecology",Ecology
+WIS,5521,"Plant-Animal Interactions",Ecology
+WIS,5555C,"Conservation Biology",Ecology
+WIS,6444,"Advanced Wetlands Ecology",Ecology
+WIS,6452,"Wildlife Ecology",Ecology
+WIS,6466,"Wildlife Population Modeling",Ecology
+WIS,6468C,"Pattern and Process in Landscape Ecology",Ecology
+WIS,6934,"Foundations of WildlifeEcology: Theory and Application",Ecology
+WIS,6934,"Stream Fish Biology",Ecology
+WIS,6934,"Wildlife Ecology and Management",Ecology
+WIS,6934,"Wildlife Habitat Management",Ecology
+WIS,6934,"Climate Change Ecology",Ecology
+WIS,6934,"Hurricane Ecology",Ecology
+WIS,6934,"Conservation Genetics",Ecology
+WIS,6934,"Sea Turtle Biology",Ecology
+WIS,6934,"Salamander Biology",Ecology
+WIS,6934,"Coastal Plains Ecosystems",Ecology
+WIS,6934,"Ecosystems of South Florida",Ecology
+ZOO,5486C,Mammalogy,Ecology
+ZOO,6005,"Integrative Principles of Zoology 1",Ecology
+ZOO,6406,"Biology of Sea Turtles",Ecology
+ZOO,6456C,Ichthyology,Ecology
+ZOO,6515C,Ethology,Ecology
+ZOO,6542,"Nutritional Ecology",Ecology
+ZOO,6931,"Seminar in Marine Turtle Biology",Ecology
+ADV,6602,"Advertising Management","Human Dimensions"
+AEB,6106,"Microeconomic Principles & Analysis","Human Dimensions"
+AEB,6453,"Natural Resource and Environmental Economics","Human Dimensions"
+AEB,6483,"Seminar in Natural Resource and Environmental Economics","Human Dimensions"
+AEB,6645,"Economic Development and Agriculture","Human Dimensions"
+AEE,5060,"Public Opinion and Agricultural and Natural Resource Issues","Human Dimensions"
+AEE,5454,"Leadership Development for Extension & Community Nonprofit Orgs","Human Dimensions"
+AEE,6300,"Methodology of Planned Change","Human Dimensions"
+AEE,6512,"Program Development in Extension Education","Human Dimensions"
+ANG,5702,"Anthropology and Development","Human Dimensions"
+CPO,6307,"Latin American Politics","Human Dimensions"
+CPO,6091,"Introduction to Comparative Political Analysis","Human Dimensions"
+ECO,7716,"International Economic Relations","Human Dimensions"
+EES,6009,"Ecological Economics","Human Dimensions"
+EES,6318,"Principles of Industrial Ecology","Human Dimensions"
+EME,6945,"Practicum in Educational Media and Instructional Design","Human Dimensions"
+ENV,5075,"Environmental Policy","Human Dimensions"
+FNR,5072C,"Environmental Education Program Development","Human Dimensions"
+FOR,5615,"Forest Conservation and Management Policies and Issues (3)","Human Dimensions"
+FOR,6005,"Conservation Behavior","Human Dimensions"
+FOR,6543,"Valuation of Forest Resources","Human Dimensions"
+FOR,6268,"Community Forest Management","Human Dimensions"
+FOR,6665,"Landscape Planning for Ecotourism","Human Dimensions"
+GEA,6468,"Resource Utilization and Conservation in Latin America","Human Dimensions"
+GEA,6468L,"Resource Utilization and Conservation in Latin America","Human Dimensions"
+LAA,6382,"Ecological and Environmental Policy","Human Dimensions"
+LAS,6290,"Tropical Conservation and Development","Human Dimensions"
+LAS,6291,"Conservation and Development Skills","Human Dimensions"
+LEI,6895,"Tourism Theory and Concepts","Human Dimensions"
+MMC,6400,"Mass Communication Theory","Human Dimensions"
+POS,6157,"Community Analysis","Human Dimensions"
+PUR,6607,"Public Relations Management","Human Dimensions"
+SCE,6290,"Science Instruction in Informal Settings","Human Dimensions"
+SOS,5235,"South Florida Ecosystems","Human Dimensions"
+SUR,6427,"Land Tenure and Administration","Human Dimensions"
+URP,6061,"Planning Administration and Ethics","Human Dimensions"
+URP,6341,"Urban Planning Project","Human Dimensions"
+URP,6601,"State Planning","Human Dimensions"
+WIS,6544,"Administration in Natural Resources","Human Dimensions"
+WIS,6525,"Environmental Interpretation","Human Dimensions"
+WIS,6543,"Wildlife and Agriculture","Human Dimensions"
+WIS,6578,"Human Dimensions of Biological Conservation","Human Dimensions"
+AEB,5167,"Ecological Analysis of Small Farm Livelihood Systems","Quantitative Analysis"
+ALS,5932,"Ecological Statistics and Design","Quantitative Analysis"
+ANG,5485,"Research Design in Anthropology","Quantitative Analysis"
+CAP,5805,"Computer Simulation Concepts","Quantitative Analysis"
+ECO,7415,"Statistical Methods in Economics","Quantitative Analysis"
+ECO,7408,"Mathematical Methods and Applications to Economics","Quantitative Analysis"
+EDF,6401,"Educational Statistics","Quantitative Analysis"
+EDF,6403,"Quantitative Foundations of Educational Research","Quantitative Analysis"
+EES,6026C,"Environmental Systems Dynamics","Quantitative Analysis"
+EES,6028,"Spatial Modeling Using GIS","Quantitative Analysis"
+EES,6301,"Comparative Approaches in Systems Ecology","Quantitative Analysis"
+FOR,5435,"Forest Information Systems","Quantitative Analysis"
+GIS,5028C,"Remote Sensing","Quantitative Analysis"
+GIS,5107C,"GIS in Research","Quantitative Analysis"
+GIS,5306,"GIS Applications in Environmental Systems","Quantitative Analysis"
+MAP,6487,"Biomathematics Seminar I","Quantitative Analysis"
+MAP,6488,"Biomathematics Seminar II","Quantitative Analysis"
+MMC,6421,"Research Methods in Mass Communication","Quantitative Analysis"
+MTG,5412,"Introduction to Dynamical Systems and Chaos","Quantitative Analysis"
+PCB,5459,Morphometrics,"Quantitative Analysis"
+PCB,6555,"Introduction to Quantitative Genetics","Quantitative Analysis"
+POS,6757,"Survey Research","Quantitative Analysis"
+STA,5325,"Fundamentals of Probability","Quantitative Analysis"
+STA,5503,"Categorical Data Methods","Quantitative Analysis"
+STA,5701,"Applied Multivariate Methods","Quantitative Analysis"
+STA,6166,"Statistical Methods in Research I","Quantitative Analysis"
+STA,6167,"Statistical Methods in Research II","Quantitative Analysis"
+STA,6207,"Applied Statistical Methods","Quantitative Analysis"
+STA,6209,"Design & Analysis of Experiments","Quantitative Analysis"
+STA,6505,"Analysis of Categorical Data","Quantitative Analysis"
+SUR,5385,"Remote Sensing Applications","Quantitative Analysis"
+SUR,5625,"Geographical Information Systems Analysis","Quantitative Analysis"
+SUR,6395,"Topics in GIS","Quantitative Analysis"
+URP,6271,"Planning Information Systems","Quantitative Analysis"
+WIS,5496,"Research Design in Wildlife Ecology","Quantitative Analysis"
+WIS,6455,"Wildlife Population Ecology","Quantitative Analysis"
+WIS,6466,"Wildlife Population Modeling","Quantitative Analysis"
+ZOO,6308,"Dynamic Optimization Models in Behavioral and Evolutionary Ecology","Quantitative Analysis"
+WIS,6468C,"Pattern and Process in Landscape Ecology","Quantitative Analysis"
+WIS,6934,Biometry,"Quantitative Analysis"
+WIS,6934,"Ecological Statistics","Quantitative Analysis"
