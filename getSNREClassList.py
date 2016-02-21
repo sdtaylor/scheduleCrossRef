@@ -74,4 +74,24 @@ for sub in pageSoup.find_all(isSubCatagory):
 
         classList=classList.append(classEntry, ignore_index=True)
 
+############################
+#Some class have multiple sub catagories. Go thru and make one row per class
+#with multiple subCatagoeries.
+
+#There are duplicate rows where the only difference is the subcategory. First find
+#all unique rows.
+classListTemp=classList[['coursePrefix','courseNum','title']].drop_duplicates()
+#Initialize a subCategory for the unique rows
+classListTemp['subCategory']=''
+#Go thru row by row and pull the subCategories out, combining them where there are multiple
+for index, row in classListTemp.iterrows():
+    #pull out the subcategories in a list
+    subCats=classList['subCategory'][classList['title']==row['title']].drop_duplicates().tolist()
+    #Clear any nan values that sneak in
+    subCats=[x for x in subCats if str(x) != 'nan']
+    #Combine them in a string and put them in the temp dataframe
+    row['subCategory']=','.join(subCats)
+
+classList=classListTemp
+
 classList.to_csv(classListFile, index=False)
