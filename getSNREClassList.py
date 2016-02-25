@@ -2,9 +2,10 @@ import urllib.request as urllib
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os.path
+from config import *
 
 baseURL='http://snre.ufl.edu/graduate/curriculum.htm'
-classListFile='SNREList.csv'
+classListFile='majorClassLists/SNREList.csv'
 
 #Only run if this datafile doesn't exist
 if os.path.exists(classListFile):
@@ -23,10 +24,22 @@ def isSubCatagory(tag):
 def isClassListing(tag):
     return tag.name=='tr' and len(tag.find_all('td'))>2
 
-classList=pd.DataFrame(columns=['coursePrefix','courseNum','title'])
+classList=pd.DataFrame(columns=['coursePrefix','courseNum','title','subCategory'])
 
 #
+#Setup subcategories with curriculum. 
+subCategoryList=['Principles of Ecology',
+        'Particular Systems',
+        'Natural Science',
+        'Social Science',
+        'Sustainability',
+        'Research & Design']
+
+
+subCategoryCount=0
 for sub in pageSoup.find_all(isSubCatagory):
+    thisSubCategory=subCategoryList[subCategoryCount]
+    subCategoryCount+=1
     for classListing in sub.find_all(isClassListing):
         classEntry={}
         classListing=classListing.find_all('td')
@@ -52,7 +65,33 @@ for sub in pageSoup.find_all(isSubCatagory):
         classEntry['coursePrefix']=classListing[0].get_text().split(' ')[0]
         classEntry['courseNum']=classListing[0].get_text().split(' ')[1]
         classEntry['title']=classListing[1].get_text()
+        classEntry['subCategory']=thisSubCategory
+
+        #Do not use law school classes. There is a ton of them and no ecology student should
+        #be taking law classes anyway
+        if classEntry['coursePrefix']=='LAW':
+            break
 
         classList=classList.append(classEntry, ignore_index=True)
+
+############################
+#Some class have multiple sub catagories. Go thru and make one row per class
+#with multiple subCatagoeries.
+
+#There are duplicate rows where the only difference is the subcategory. First find
+#all unique rows.
+classListTemp=classList[['coursePrefix','courseNum','title']].drop_duplicates()
+#Initialize a subCategory for the unique rows
+classListTemp['subCategory']=''
+#Go thru row by row and pull the subCategories out, combining them where there are multiple
+for index, row in classListTemp.iterrows():
+    #pull out the subcategories in a list
+    subCats=classList['subCategory'][classList['title']==row['title']].drop_duplicates().tolist()
+    #Clear any nan values that sneak in
+    subCats=[x for x in subCats if str(x) != 'nan']
+    #Combine them in a string and put them in the temp dataframe
+    row['subCategory']=','.join(subCats)
+
+classList=classListTemp
 
 classList.to_csv(classListFile, index=False)
