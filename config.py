@@ -32,6 +32,10 @@ terms=[
      {'name' :'201008', 'prettyName':'Fall 2010', 'termSchedule': 'semesterData/201008.csv'} 
 ]
 
+#To deal with 100's of special topic classes that may or may not be on the curriculum (and if not, still deserve
+#to be considered), show *all* special topcis classes from a few relevant departments
+relevantDepts=['BOT','ZOO','FAS','WIS']
+
 #Every dept has 'Special Topic' codes that are not necessarily in the curriculum. 
 #Since they all share the same course codes with things thare *are* in the curriclum, 
 #all special topics are included.
@@ -60,8 +64,12 @@ specialTopicClasses=['ZOO6927',
                      'BOT6935',
                      'ANG6930',
                      'ENV6935',
+                     'ENV6932',
                      'FOR6934',
                      'MAT6932',
                      'LAW6930',
+                     'SYA7933',
+                     'GEB6930',
+                     'AFS6905',
                      'VME6934'
                      ]
