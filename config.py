@@ -34,7 +34,7 @@ terms=[
 
 #To deal with 100's of special topic classes that may or may not be on the curriculum (and if not, still deserve
 #to be considered), show *all* special topcis classes from a few relevant departments
-relevantDepts=['BOT','ZOO','FAS','WIS']
+relevantDepts=['BOT','ZOO','FAS','WIS','FOR']
 
 #Every dept has 'Special Topic' codes that are not necessarily in the curriculum. 
 #Since they all share the same course codes with things thare *are* in the curriclum, 
