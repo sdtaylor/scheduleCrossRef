@@ -48,7 +48,6 @@ for thisMajor in majors:
     crossRef=crossRef[ (crossRef['specialTopic']=='No') |
                        ( (crossRef['specialTopic']=='Yes') & (crossRef['coursePrefix'].isin(relevantDepts)) )]
 
-    print(crossRef.shape)
     #Get history of when all the classes have been offered
     history=[]
     for thisClass in crossRef['title'].values.tolist():
