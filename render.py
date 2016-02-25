@@ -58,6 +58,9 @@ for thisMajor in majors:
     #Add the history to the rest of the info, and convert it to a dict for passing to web object
     crossRef=crossRef.join(history)
 
+    #Replace na's with blanks or JSON parsing breaks
+    crossRef.fillna('', inplace=True)
+
     #Convert to dictionary for dumping out as json object
     crossRef=crossRef.to_dict('records')
 
