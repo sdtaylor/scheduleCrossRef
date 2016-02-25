@@ -3,11 +3,7 @@ import pandas as pd
 import json
 from config import *
 from findHistory import *
-
-#schedule=pd.read_csv('SNRE2016.csv')
-#x=schedule.to_dict('records')
-
-
+import re
 
 #Get current term info
 for thisTerm in terms:
@@ -15,6 +11,7 @@ for thisTerm in terms:
         break
 
 thisTermSchedule=pd.read_csv(thisTerm['termSchedule'])
+thisTermSchedule['coursePrefixNum']=thisTermSchedule['coursePrefix'] + thisTermSchedule['courseNum'].astype(str)
 
 #Load template file for majors
 template=mako.template.Template(filename=majorTemplate)
@@ -23,13 +20,35 @@ template=mako.template.Template(filename=majorTemplate)
 for thisMajor in majors:
     #Get list of this majors classes. Drop any duplicates that show up for whatever reason
     classList=pd.read_csv(thisMajor['classFile']) 
-    classList=classList[['coursePrefix','courseNum','subCategory']]
+    classList=classList[['coursePrefix','courseNum','title','subCategory']]
     classList.drop_duplicates(inplace=True)
 
-    #Cross reference it with the main schedule for this term using an inner merge, where only 
-    #entries that are in both lists are used. Then make it a dictionary to pass to the template engine.
-    crossRef=pd.merge(classList, thisTermSchedule, on=['coursePrefix','courseNum'], how='inner').fillna('')
+    #Concatonate the prefix and number into one value
+    classList['coursePrefixNum']=classList['coursePrefix'] + classList['courseNum'].astype(str)
 
+    #classes happening this term that = one of the courses in the course list
+    crossRef=thisTermSchedule[thisTermSchedule['coursePrefixNum'].isin(classList['coursePrefixNum'])]
+
+    #Initialize specialTopics and subCategory.
+    crossRef['specialTopic']='No'
+    crossRef['subCategory']=''
+
+
+    #Set special topics flag. Also use this loop to set subCategories for non-special topics
+    for index, row in crossRef.iterrows():
+        if row['coursePrefixNum'] in specialTopicClasses:
+            row['specialTopic']='Yes'
+        else:
+            subCats=classList[classList['coursePrefixNum']==row['coursePrefixNum']]['subCategory'].tolist()
+            subCats=','.join(subCats)
+            row['subCategory']=subCats
+    
+    #Drop any special topics that are not in relevant departments (defined in config file)
+    #Keep any records with (specialTopics=No) OR (specialTopic=Yes AND couserPrefix=relevant)
+    crossRef=crossRef[ (crossRef['specialTopic']=='No') |
+                       ( (crossRef['specialTopic']=='Yes') & (crossRef['coursePrefix'].isin(relevantDepts)) )]
+
+    print(crossRef.shape)
     #Get history of when all the classes have been offered
     history=[]
     for thisClass in crossRef['title'].values.tolist():
@@ -38,12 +57,6 @@ for thisMajor in majors:
 
     #Add the history to the rest of the info, and convert it to a dict for passing to web object
     crossRef=crossRef.join(history)
-
-    #Check to see if classes are special topic classes
-    crossRef['specialTopic']='No'
-    for index, row in crossRef.iterrows():
-        if ''.join(row[['coursePrefix','courseNum']].values.tolist()) in specialTopicClasses:
-                row['specialTopic']='Yes'
 
     #Convert to dictionary for dumping out as json object
     crossRef=crossRef.to_dict('records')
