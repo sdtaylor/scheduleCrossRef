@@ -84,6 +84,7 @@ $(document).ready(function() {
 	{ "data": "credits"},
 	{ "data": "title"},
 	{ "data": "prof"},
+	{ "data": "subCategory"},
 	{ "data": "frequency"}
         ],
         "order": [[1, 'asc']]
@@ -138,6 +139,7 @@ $(document).ready(function() {
                             <th>Credits</th>
                             <th>Name</th>
                             <th>Professors</th>
+                            <th>Sub Category</th>
                             <th>Frequency</th>
                         </tr>
                     </thead>
