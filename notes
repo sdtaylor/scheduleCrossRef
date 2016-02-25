@@ -1,7 +1,9 @@
 todo
 	Done	google analytics
+
 	footer with my info
         put Area Topic tag on classes
+
 	DONE make csv for SNRE
         DONE make csv for WEC
         go through and label unique classes so that classes vs sections of that class can be summarized
@@ -17,11 +19,15 @@ todo
 
         make classes searchable by comma sperated list of depts prefixes
 
-	make instructions file for classlists, adding terms, new majors, etc
+	DONE on readme. make instructions file for classlists, adding terms, new majors, etc
 
-	deal with special topcis better, there are just too many in the SNRE list
+	DONE deal with special topcis better, there are just too many in the SNRE list
 		a word search maybe?
 		by hand?
+        ended up just keeping all special topics in relevant depts like WIS and ZOO, dropping all other ones (who cares about random shit from LAS...)
 
 	add a full schedule option
 		need to do this after make the prefixes searchable
+
+	keyword search for classes
+		*this isn't in curriculum but sounds like it might be fun*
