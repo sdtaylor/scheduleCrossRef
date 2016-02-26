@@ -69,7 +69,7 @@ $(document).ready(function() {
     var table = $('#maintable').DataTable( {
 	"paging": false,
 	"info": false,
-	"ajax": "${thisMajor['name']}objects.txt",
+	"ajax": "${thisMajor['name']}objects_${termInfo['name']}.txt",
         "columns": [
             {
                 "className":      'details-control',
@@ -124,7 +124,7 @@ $(document).ready(function() {
                             <a href="index.html">Home</a>
                         </li>
                     </ul>
-                    <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>${thisMajor['name']} Spring 2016</b></a>
+                    <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>${thisMajor['name']} ${termInfo['prettyName']}</b></a>
                 </div>
             </div>
             <!-- Main table section -->
