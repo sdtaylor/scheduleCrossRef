@@ -24,7 +24,7 @@ def renderMajorPage(major, termInfo):
     classList['coursePrefixNum']=classList['coursePrefix'] + classList['courseNum'].astype(str)
 
     #classes happening this term that = one of the courses in the course list
-    crossRef=thisTermSchedule[thisTermSchedule['coursePrefixNum'].isin(classList['coursePrefixNum'])]
+    crossRef=thisTermSchedule[thisTermSchedule['coursePrefixNum'].isin(classList['coursePrefixNum'])].copy()
 
     #Initialize specialTopics and subCategory.
     crossRef['specialTopic']='No'
@@ -34,11 +34,11 @@ def renderMajorPage(major, termInfo):
     #Set special topics flag. Also use this loop to set subCategories for non-special topics
     for index, row in crossRef.iterrows():
         if row['coursePrefixNum'] in specialTopicClasses:
-            row['specialTopic']='Yes'
+            crossRef.loc[index,'specialTopic']='Yes'
         else:
             subCats=classList[classList['coursePrefixNum']==row['coursePrefixNum']]['subCategory'].tolist()
             subCats=','.join(subCats)
-            row['subCategory']=subCats
+            crossRef.loc[index,'subCategory']=subCats
     
     #Drop any special topics that are not in relevant departments (defined in config file)
     #Keep any records with (specialTopics=No) OR (specialTopic=Yes AND couserPrefix=relevant)
@@ -61,7 +61,7 @@ def renderMajorPage(major, termInfo):
     crossRef=crossRef.to_dict('records')
 
     #this majors html page name
-    page='www/'+major['name']+'_'+term+'.html'
+    page='www/'+major['name']+'_'+termInfo['name']+'.html'
 
     #Write it out!
     with open(page, 'w') as f:
@@ -69,7 +69,7 @@ def renderMajorPage(major, termInfo):
 
 
     crossRef={'data' : crossRef}
-    objectFile='www/'+major['name']+'objects'+'_'+term+'.txt'
+    objectFile='www/'+major['name']+'objects'+'_'+termInfo['name']+'.txt'
     with open(objectFile, 'w') as f:
         json.dump(crossRef, f, indent=4)
     
