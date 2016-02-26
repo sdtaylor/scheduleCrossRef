@@ -6,13 +6,14 @@ import pandas as pd
 #then import all old schedules
 allTerms=pd.read_csv(terms[0]['termSchedule'])
 allTerms['termName']=terms[0]['name']
-for thisTerm in terms:
+for thisTerm in terms[1:]:
     newTerm=pd.read_csv(thisTerm['termSchedule'])
     newTerm['termName']=thisTerm['name']
     allTerms=allTerms.append(newTerm, ignore_index=True)
 
+
 #Get rid of this term in the data
-allTerms=allTerms[allTerms['termName']!=currentTermName]
+allTerms=allTerms[~allTerms['termName'].isin(termNames)]
 
 #Only care about these two columns
 allTerms=allTerms[['termName','title']]

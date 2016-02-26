@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Simpler UF Grad Student Schedule</title>
+        <title>Simple UF Grad Student Schedule</title>
         <!-- Bootstrap core CSS + datables integration -->
         <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">
@@ -69,7 +69,7 @@ $(document).ready(function() {
     var table = $('#maintable').DataTable( {
 	"paging": false,
 	"info": false,
-	"ajax": "WECobjects.txt",
+	"ajax": "WECobjects_201606.txt",
         "columns": [
             {
                 "className":      'details-control',
@@ -124,7 +124,7 @@ $(document).ready(function() {
                             <a href="index.html">Home</a>
                         </li>
                     </ul>
-                    <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>WEC Spring 2016</b></a>
+                    <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>WEC Summer 2016</b></a>
                 </div>
             </div>
             <!-- Main table section -->
@@ -139,7 +139,7 @@ $(document).ready(function() {
                             <th>Credits</th>
                             <th>Name</th>
                             <th>Professors</th>
-                            <th>Sub Category</th>
+                            <th>Category</th>
                             <th>Frequency</th>
                         </tr>
                     </thead>
