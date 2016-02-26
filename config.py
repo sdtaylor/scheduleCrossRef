@@ -1,7 +1,7 @@
 #The term schedule that gets displayed. Can do multiple terms in the case of displaying
 #summer and fall at the same time
 #Term codes are YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
-termNames=['201601','201508']
+termNames=['201606','201608']
 
 majorTemplate='in/majorPage.html.mako'
 

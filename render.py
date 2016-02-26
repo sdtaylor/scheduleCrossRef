@@ -5,21 +5,18 @@ from config import *
 from findHistory import *
 import re
 
-#Get current term info
-for thisTerm in terms:
-    if thisTerm['name']==currentTermName:
-        break
+#render a page for a specific major in a specific term
+#major is a dict with major info from config file. term is a single str for term, ie '201601'
+def renderMajorPage(major, termInfo):
 
-thisTermSchedule=pd.read_csv(thisTerm['termSchedule'])
-thisTermSchedule['coursePrefixNum']=thisTermSchedule['coursePrefix'] + thisTermSchedule['courseNum'].astype(str)
+    thisTermSchedule=pd.read_csv(termInfo['termSchedule'])
+    thisTermSchedule['coursePrefixNum']=thisTermSchedule['coursePrefix'] + thisTermSchedule['courseNum'].astype(str)
 
-#Load template file for majors
-template=mako.template.Template(filename=majorTemplate)
+    #Load template file for majors
+    template=mako.template.Template(filename=majorTemplate)
 
-#render the major pages one at a time.
-for thisMajor in majors:
     #Get list of this majors classes. Drop any duplicates that show up for whatever reason
-    classList=pd.read_csv(thisMajor['classFile']) 
+    classList=pd.read_csv(major['classFile']) 
     classList=classList[['coursePrefix','courseNum','title','subCategory']]
     classList.drop_duplicates(inplace=True)
 
@@ -54,7 +51,7 @@ for thisMajor in majors:
         history.append(getPriorTerms(thisClass))
     history=pd.DataFrame(history, index=crossRef.index)
 
-    #Add the history to the rest of the info, and convert it to a dict for passing to web object
+    #Add the history to the rest of the info.
     crossRef=crossRef.join(history)
 
     #Replace na's with blanks or JSON parsing breaks
@@ -64,18 +61,30 @@ for thisMajor in majors:
     crossRef=crossRef.to_dict('records')
 
     #this majors html page name
-    page='www/'+thisMajor['name']+'.html'
+    page='www/'+major['name']+'_'+term+'.html'
 
     #Write it out!
     with open(page, 'w') as f:
-        f.write(template.render(classes=crossRef, thisMajor=thisMajor))
+        f.write(template.render(classes=crossRef, thisMajor=major, termInfo=termInfo))
 
 
     crossRef={'data' : crossRef}
-    objectFile='www/'+thisMajor['name']+'objects.txt'
+    objectFile='www/'+major['name']+'objects'+'_'+term+'.txt'
     with open(objectFile, 'w') as f:
         json.dump(crossRef, f, indent=4)
     
+
+for thisMajor in majors:
+    for thisTermName in termNames:
+        #Get current term info. (like pretty name, semester list file, etc.)
+        for thisTermInfo in terms:
+            if thisTermInfo['name']==thisTermName:
+                break
+
+        #Render the html page and json object for this major/term
+        renderMajorPage(thisMajor, thisTermInfo)   
+
+exit()
 #render the index page
 template=mako.template.Template(filename='in/index.html.mako')
 with open('www/index.html', 'w') as f:
