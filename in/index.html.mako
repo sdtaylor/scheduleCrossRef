@@ -36,7 +36,7 @@
                             <a href="index.html">Home</a>
                         </li>
                     </ul>
-                    <a class="navbar-brand navbar-right" href="#" style="display: block;"><b>Spring 2016</b></a>
+                    <a class="navbar-brand navbar-right" href="#" style="display: block;"></a>
                 </div>
             </div>
             <!-- Main section -->
@@ -56,9 +56,9 @@
                 </dl>
                 <h3 style="display: block;">Majors</h3>
                 <ul style="display: block;"> 
-% for thisMajor in majors:
+% for thisPage in pages:
                     <li style="display: list-item;" class="majorList">
-                        <a href="${thisMajor['name']}.html">${thisMajor['name']}</a>
+                        <a href="${thisPage['link']}">${thisPage['majorName']} - ${thisPage['termPrettyName']}</a>
                     </li>                     
 % endfor
                 </ul>

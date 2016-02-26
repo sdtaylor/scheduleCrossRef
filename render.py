@@ -74,6 +74,10 @@ def renderMajorPage(major, termInfo):
         json.dump(crossRef, f, indent=4)
     
 
+#Information to put into the index.html page. The location of every major/term page
+pages=[]
+
+#Render each term with each configure major
 for thisMajor in majors:
     for thisTermName in termNames:
         #Get current term info. (like pretty name, semester list file, etc.)
@@ -84,8 +88,13 @@ for thisMajor in majors:
         #Render the html page and json object for this major/term
         renderMajorPage(thisMajor, thisTermInfo)   
 
-exit()
+        #Add the page info for inclusion to index.html
+        pages.append({'majorName' : thisMajor['name'],
+                      'termPrettyName' : thisTermInfo['prettyName'],
+                      'link' : thisMajor['name']+'_'+thisTermInfo['name']+'.html'})
+
+
 #render the index page
 template=mako.template.Template(filename='in/index.html.mako')
 with open('www/index.html', 'w') as f:
-    f.write(template.render(majors=majors))
+    f.write(template.render(pages=pages))
