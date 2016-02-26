@@ -139,7 +139,7 @@ $(document).ready(function() {
                             <th>Credits</th>
                             <th>Name</th>
                             <th>Professors</th>
-                            <th>Sub Category</th>
+                            <th>Category</th>
                             <th>Frequency</th>
                         </tr>
                     </thead>
