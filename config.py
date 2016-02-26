@@ -1,6 +1,7 @@
-#The term schedule that gets displayed. Can only do one at a time.
+#The term schedule that gets displayed. Can do multiple terms in the case of displaying
+#summer and fall at the same time
 #Term codes are YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
-currentTermName='201601'
+termNames=['201601','201508']
 
 majorTemplate='in/majorPage.html.mako'
 
@@ -18,10 +19,14 @@ majors=[
 #prettyName: the more comprehendable name. eg. Fall 2015
 #termSchedule: the filename for the downloaded csv file for the schedule. All should be semesterData/YYYYXX.csv
 terms=[
+     {'name' :'201608', 'prettyName':'Fall 2016', 'termSchedule': 'semesterData/201608.csv'}, 
+     {'name' :'201606', 'prettyName':'Summer 2016', 'termSchedule': 'semesterData/201606.csv'}, 
      {'name' :'201601', 'prettyName':'Spring 2016', 'termSchedule': 'semesterData/201601.csv'}, 
      {'name' :'201508', 'prettyName':'Fall 2015', 'termSchedule': 'semesterData/201508.csv'}, 
+     {'name' :'201506', 'prettyName':'Summer 2015', 'termSchedule': 'semesterData/201506.csv'}, 
      {'name' :'201501', 'prettyName':'Spring 2015', 'termSchedule': 'semesterData/201501.csv'}, 
      {'name' :'201408', 'prettyName':'Fall 2014', 'termSchedule': 'semesterData/201408.csv'}, 
+     {'name' :'201406', 'prettyName':'Summer 2014', 'termSchedule': 'semesterData/201406.csv'}, 
      {'name' :'201401', 'prettyName':'Spring 2014', 'termSchedule': 'semesterData/201401.csv'}, 
      {'name' :'201308', 'prettyName':'Fall 2013', 'termSchedule': 'semesterData/201308.csv'}, 
      {'name' :'201301', 'prettyName':'Spring 2013', 'termSchedule': 'semesterData/201301.csv'}, 
