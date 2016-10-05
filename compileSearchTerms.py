@@ -1,11 +1,11 @@
 import pandas as pd
 from config import *
 
-allClasses=pd.DataFrame(columns=['coursePrefix','courseNum','title','prof','semesters'])
+allClasses=pd.DataFrame(columns=['coursePrefix','courseNum','title','semesters'])
 
 for thisSemester in terms[1:5]:
     thisSemesterData=pd.read_csv(thisSemester['termSchedule'])
-    thisSemesterData=thisSemesterData[['coursePrefix','courseNum','title','prof']]
+    thisSemesterData=thisSemesterData[['coursePrefix','courseNum','title']]
     
     print(thisSemesterData.shape)
     thisSemesterData=thisSemesterData.drop_duplicates(subset=['coursePrefix','courseNum','title'])
