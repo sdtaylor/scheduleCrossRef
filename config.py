@@ -19,6 +19,7 @@ majors=[
 #prettyName: the more comprehendable name. eg. Fall 2015
 #termSchedule: the filename for the downloaded csv file for the schedule. All should be semesterData/YYYYXX.csv
 terms=[
+     {'name' :'201701', 'prettyName':'Spring 2017', 'termSchedule': 'semesterData/201701.csv'}, 
      {'name' :'201608', 'prettyName':'Fall 2016', 'termSchedule': 'semesterData/201608.csv'}, 
      {'name' :'201606', 'prettyName':'Summer 2016', 'termSchedule': 'semesterData/201606.csv'}, 
      {'name' :'201601', 'prettyName':'Spring 2016', 'termSchedule': 'semesterData/201601.csv'}, 
