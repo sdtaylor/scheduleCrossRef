@@ -42,6 +42,9 @@ terms=[
 #to be considered), show *all* special topcis classes from a few relevant departments
 relevantDepts=['BOT','ZOO','FAS','WIS','FOR']
 
+#Exclude any classes with these titles. Designed for research credits which I don't need to have on the site
+classTitleExclusions=['SUPERVISED RESEARCH','MASTERS RESEARCH','DOCTORAL RESEARCH','ADVANCED RESEARCH']
+
 #Every dept has 'Special Topic' codes that are not necessarily in the curriculum. 
 #Since they all share the same course codes with things thare *are* in the curriclum, 
 #all special topics are included.

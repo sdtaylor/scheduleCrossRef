@@ -24,7 +24,9 @@ def renderMajorPage(major, termInfo):
     classList['coursePrefixNum']=classList['coursePrefix'] + classList['courseNum'].astype(str)
 
     #classes happening this term that = one of the courses in the course list
-    crossRef=thisTermSchedule[thisTermSchedule['coursePrefixNum'].isin(classList['coursePrefixNum'])].copy()
+    #or are in relevent departments like biology, forestry, etc. 
+    crossRef=thisTermSchedule[(thisTermSchedule['coursePrefixNum'].isin(classList['coursePrefixNum'])) | 
+                              (thisTermSchedule['coursePrefix'].isin(relevantDepts))].copy()
 
     #Initialize specialTopics and subCategory.
     crossRef['specialTopic']='No'
@@ -44,6 +46,9 @@ def renderMajorPage(major, termInfo):
     #Keep any records with (specialTopics=No) OR (specialTopic=Yes AND couserPrefix=relevant)
     crossRef=crossRef[ (crossRef['specialTopic']=='No') |
                        ( (crossRef['specialTopic']=='Yes') & (crossRef['coursePrefix'].isin(relevantDepts)) )]
+
+    #Drop research credit classes that are offerend every semester
+    crossRef=crossRef[~crossRef['title'].isin(classTitleExclusions)]
 
     #Get history of when all the classes have been offered
     history=[]
