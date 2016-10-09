@@ -49,9 +49,9 @@
                     <dd style="display: block;">
                         <ul data-pg-collapsed=""> 
 			    <li>I pulled the major curriculum off their respective websites. Like the SNRE curriculum page, and the WEC grad student handbook. </li>
-                            <li>Special Topic classes share a common course number (like ZOO 6927), so are very annoying to cross rerference. Every special topic class will be listed for relevant departments (WIS, FOR, ZOO, FAS, BOT) and be marked with Special Topic:Yes in the info. They may or may not be on the official curriculum, so they don't have the categories listed. But most are fair game anyway if you petition to take it.</li>                             
+                            <li>Special Topic classes share a common course number (like ZOO 6927), so are very annoying to cross rerference. They are marked with Special Topic:Yes in the info and won't have the categories listed. But most are fair game anyway if you petition to take it.</li>                             
+                <li>All classes from relevent depts like BOT, ZOO, and  WIS are listed.</li>
 			    <li>The frequency column searches for the class title in the historic schedules from the past few years. It may be off if the class title has changed. </li>
-			    <li>Summer courses do no have the Summer A-C schedule listed yet. I'm working on that. </li>
                         </ul>
                     </dd>                     
                 </dl>
