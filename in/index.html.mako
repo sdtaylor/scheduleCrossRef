@@ -64,6 +64,10 @@
 % endfor
                 </ul>
             </div>
+<%! import datetime %>
+            <div>
+              <dt style="display: block;">Last updated: ${datetime.datetime.now().strftime('%b %d, %Y')}</dt> 
+            </div>
         </div>         
         <!-- /container -->
     </body>
