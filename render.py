@@ -47,6 +47,17 @@ def renderMajorPage(major, termInfo):
     crossRef=crossRef[ (crossRef['specialTopic']=='No') |
                        ( (crossRef['specialTopic']=='Yes') & (crossRef['coursePrefix'].isin(relevantDepts)) )]
 
+    #Drop undergrad classes. Must drop the appended C temporarily (ie. 4324C)
+    def to_int(x):
+        try:
+            return int(x)
+        except ValueError:
+            return int(x[:-1])
+
+    crossRef['courseNumTemp'] = crossRef['courseNum'].apply(to_int)
+    crossRef=crossRef[ crossRef.courseNumTemp>=5000]
+    crossRef.drop('courseNumTemp', 1, inplace=True)
+
     #Drop research credit classes that are offerend every semester
     crossRef=crossRef[~crossRef['title'].isin(classTitleExclusions)]
 
