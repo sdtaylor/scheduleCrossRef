@@ -42,7 +42,7 @@ terms=[
 
 #To deal with 100's of special topic classes that may or may not be on the curriculum (and if not, still deserve
 #to be considered), show *all* special topcis classes from a few relevant departments
-relevantDepts=['BOT','ZOO','FAS','WIS','FOR']
+relevantDepts=['BOT','ZOO','FAS','WIS','FOR','GEO','ENV']
 
 #Exclude any classes with these titles. Designed for research credits which I don't need to have on the site
 classTitleExclusions=['SUPERVISED RESEARCH','MASTERS RESEARCH','DOCTORAL RESEARCH','ADVANCED RESEARCH']
