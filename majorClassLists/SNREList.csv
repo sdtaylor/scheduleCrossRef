@@ -1,25 +1,21 @@
 coursePrefix,courseNum,title,subCategory
 ALS,5156,Agricultural Ecology Principles & Applications,Principles of Ecology
-EES,5305C,Ecological & General Systems,"Principles of Ecology,Particular Systems"
 PCB,5338,Principles of Ecosystem Ecology,"Principles of Ecology,Particular Systems,Natural Science"
-WIS,6934,Topics in Wildlife and Range Sciences: Wildlife Ecology and Management,Principles of Ecology
-PCB,4043C,General Ecology,Principles of Ecology
-FAS,5901,Scientific Thinking in Ecology,Particular Systems
-ANG,6086,Historical Ecology,Particular Systems
-ANT,6930,Ethnoecology,Particular Systems
-LAS,6290,Ethnoecology,Particular Systems
-ALS,6932,Principles of Agroecology,Particular Systems
-EES,6007,Advanced Energy and Environment,Particular Systems
+FAS,5901,Scientific Thinking in Ecology,"Particular Systems,Social Science"
+ANG,6086,Historical Ecology,"Particular Systems,Social Science"
+LAS,6290/ANT,Ethnoecology in Conservation,Particular Systems
+ALS,6930,Graduate Seminar: Principles of Agroecology,Particular Systems
+EES,5305C,Ecological & General Systems,Particular Systems
+EES,6007,Advanced Energy and Environment,"Particular Systems,Natural Science"
 EES,6301,Comparative Approaches in Systems Ecology,Particular Systems
 PCB,5046C,Advanced Ecology,Particular Systems
-PCB,5415C,Advanced Ecology,Particular Systems
+PCB,5415C,Behavioral Ecology,Particular Systems
 PCB,6447C,Community Ecology,Particular Systems
 WIS,5555C,Conservation Biology,"Particular Systems,Natural Science"
 WIS,6455,Wildlife Population Ecology,"Particular Systems,Natural Science"
-WIS,6468C,Pattern and Process in Landscape Ecology,"Particular Systems,Natural Science,Research & Design"
+WIS,6468C,Pattern and Process in Landscape Ecology,"Particular Systems,Natural Science,Social Science"
 ZOO,6927,Special Topics in Zoology: Macroecology,Particular Systems
 BOT,5695,Ecosystems of Florida,"Particular Systems,Natural Science"
-EES,6301,Comparatie Approaches in Systems Ecology,Particular Systems
 EES,6308C,Wetland Ecology,"Particular Systems,Natural Science"
 EES,6318,Principles of Industrial Ecology,Particular Systems
 EES,6356,Estuarine Systems,"Particular Systems,Natural Science"
@@ -29,7 +25,7 @@ ENY,6203L,Insect Ecology Laboratory,"Particular Systems,Natural Science"
 FAS,5276C,Field Ecology of Aquatic Organisms,Particular Systems
 FAS,6932,Special Topics in Fisheries and Aquatic Sciences: Marine Ecological Processes,Particular Systems
 FAS,6932,Special Topics in Fisheries and Aquatic Sciences: Plankton Ecology,Particular Systems
-LAS,6938,Special Topics in Modern Latin American Studies:Ecological Principles for Development Professionals,Particular Systems
+LAS,6938,Special Topics in Modern Latin American Studies: Ecological Principles for Development Professionals,Particular Systems
 NEM,6201,Nematode Ecology,Particular Systems
 PCB,5307C,Limnology,"Particular Systems,Natural Science"
 PCB,5356,Tropical Ecology,"Particular Systems,Natural Science"
@@ -39,23 +35,22 @@ PLS,6623,Invasion Ecology (formerly 'Weed Ecology'),Particular Systems
 SWS,5050,Soils for Environmental Professionals,"Particular Systems,Natural Science"
 SWS,5235,South Florida Ecosystems,"Particular Systems,Natural Science"
 SWS,5305C,Soil Microbial Ecology,"Particular Systems,Natural Science"
-SWS,6323,Advanced Microbial Ecology,"Particular Systems,Research & Design"
+SWS,6323,Advanced Microbial Ecology,Particular Systems
 WIS,6444,Advanced Wetlands Ecology,"Particular Systems,Natural Science"
 WIS,6452,Wildlife Ecology,"Particular Systems,Natural Science"
-WIS,6934,Topics in Wildlife and Range Sciences:An Introduction to Tropical Ecology and Conservation,Particular Systems
-WIS,6934,Topics in Wildlife and Range Sciences:Climate Change Ecology,Particular Systems
+WIS,6934,Topics in Wildlife and Range Sciences: An Introduction to Tropical Ecology and Conservation,Particular Systems
+WIS,6934,Topics in Wildlife and Range Sciences: Climate Change Ecology,Particular Systems
 ZOO,6542,Nutrition Ecology,Particular Systems
-ABE,5643C,Biological Systems Modeling,"Natural Science,Sustainability,Research & Design"
-ANG,6930,Special Topics in Anthropology: Hunter-Gatherers,Natural Science
-AOM,6932,"Special Topics in Agricultural Operations Management:
-                    Principles and Issues in Environmental Hydrology",Natural Science
+ABE,5643C,Biological Systems Modeling,Natural Science
+ANG,6930,Special Topics in Anthropology: Hunter-Gatherers,"Natural Science,Social Science"
+AOM,6932,Special Topics in Agricultural Operations Management: Principles and Issues in Environmental Hydrology,Natural Science
 BOT,5655C,Physiological Plant Ecology,Natural Science
 BOT,5685C,Tropical Botany,Natural Science
 BOT,5695C,Ecosystems of Florida,"Particular Systems,Natural Science"
 BOT,5725C,Taxonomy of Vascular Plants,Natural Science
 BOT,6935,Special Topics: Ecology and Natural History of the Tropics,Natural Science
 EES,5207,Environmental Chemistry,Natural Science
-ENV,6441,Water Resources Planning and Management,"Natural Science,Sustainability"
+ENV,6441,Water Resources Planning and Management,"Natural Science,Social Science"
 ENV,6511,Biological Wastewater Treatment,Natural Science
 ENV,6932,Special Problems in Environmental Engineering,Natural Science
 ENV,6935,Graduate Environmental Engineering Seminar: Adaptive Management,Natural Science
@@ -64,15 +59,14 @@ FAS,6932,Special Topics in Fisheries and Aquatic Sciences,Natural Science
 FOR,5159,Ecology and Restoration of Longleaf Pine Ecosystems,Natural Science
 FOR,5756,Non-Timber Forest Products,Natural Science
 FOR,6154,Analysis of Forest Ecosystems,Natural Science
-FOR,6170,Tropical Forestry,"Natural Science,Sustainability"
+FOR,6170,Tropical Forestry,Natural Science
 FOR,6934,Topics in Forest Resources and Conservation,Natural Science
 HOS,6932,Special Topics: Advanced Restoration Ecology,Natural Science
 LAA,6231,Landscape Architecture Theory,Natural Science
-LAS,6938,Seminar in LAS: Ecological Principles for Development Professionals,Natural Science
+LAS,6938,Seminar in Modern Latin American Studies: Ecological Principles for Development Professionals,Natural Science
 LEI,5255,Outdoor Recreation and Park Management,Natural Science
 LEI,6557,Recreation Management/Development in Coastal Zone,Natural Science
-PCB,5356C,Tropical Ecology,"Particular Systems,Natural Science"
-PHC,6937,Special Topics in PHC: Aquatic Systems and Environmental Health,Natural Science
+PHC,6937,Special Topics in Public Health: Aquatic Systems and Environmental Health,Natural Science
 PLS,6623,Weed Ecology,Natural Science
 SWS,5115,Environmental Nutrient Management,Natural Science
 SWS,5132,Tropical Soil Management,Natural Science
@@ -83,7 +77,7 @@ SWS,6932,Topics in Soils: Sustainable Agriculture and Urban Land Management,Natu
 SWS,6932,Topics in Soils: Forest and Soil Ecosystem Services,Natural Science
 SWS,6932,Topics in Soils: Florida Lake Management,Natural Science
 VME,6602,General Toxicology,Natural Science
-VME,6063,Advanced Toxicology,Natural Science
+VME,6603,Advanced Toxicology,Natural Science
 WIS,5323C,Impact of Diseases on Wildlife Populations,Natural Science
 WIS,5521,Plant-Animal Interactions,Natural Science
 WIS,6466,Wildlife Population Modeling,Natural Science
@@ -91,215 +85,171 @@ WIS,6575,Mammalian Carnivores: Conservation and Management Issues,Natural Scienc
 WIS,6934,Topics in Wildlife and Range Sciences: Foundations of Wildlife Ecology: Theory and Application,Natural Science
 WIS,6934,Topics in Wildlife and Range Sciences: Systematic Planning of Conservation Projects,Natural Science
 WIS,6934,Topics in Wildlife and Range Sciences: Advanced Topics in Population Ecology,Natural Science
-Zoo,6927,Special Topics in Zoology: Scales in Ecosystems,Natural Science
-Zoo,6927,Special Topics in Zoology: Ecological Basis of Tropical Conservation,Natural Science
-Zoo,6927,Special Topics in Zoology: Concepts of Adaptive Management,Natural Science
+ZOO,6927,Special Topics in Zoology: Scales in Ecosystems,Natural Science
+ZOO,6927,Special Topics in Zoology: Ecological Basis of Tropical Conservation,Natural Science
+ZOO,6927,Special Topics in Zoology: Concepts of Adaptive Management,Natural Science
 FAS,5203C,Biology of Fishes,Natural Science
-FAS,5335C,Applied Fisheries Statistics,"Natural Science,Research & Design"
-FAS,6932,Special Topics in FAS: Fisheries Management and Ecology,Natural Science
-FOR,5159,Ecology and Restoration of the Longleafe Pine Ecosystem,Natural Science
+FAS,5335C,Applied Fisheries Statistics,Natural Science
+FAS,6932,Special Topics in Fisheries and Aquatic Sciences: Fisheries Management and Ecology,Natural Science
+FOR,5159,Ecology and Restoration of the Longleaf Pine Ecosystem,Natural Science
 GEO,5305,Environmental Biogeography,Natural Science
 GLY,5827,Ground Water Geology,Natural Science
 SWS,6262,Soil Contamination & Remediation,Natural Science
-SWS,6448,Biogeochemistry of Wetlands,Natural Science
+SWS,6448,Biogeochemistry of Wetlands and Aquatic Systems,Natural Science
+VME,6934,Topics in Veterinary Medical Sciences: Aquatic Animal Conservation Issues,Natural Science
 WIS,6934,Topics in Wildlife and Range Sciences: An Introduction to Tropical Ecology and Conservation,Natural Science
-VME,6934,Topics in VME: Aquatic Animal Conservation Issues,Natural Science
 AGR,5277C,Tropical Crop Production,Natural Science
 AGR,5444,Ecophysiology of Crop Plants,Natural Science
 AGR,5511,Crop Ecology,Natural Science
 AGR,6233,Tropical Grassland Agroecosystems,Natural Science
 AGR,6422C,Environmental Crop Nutrition,Natural Science
 AGR,6932,Topics in Agronomy: Bioenergy Crops,Natural Science
-ALS,5106,Food & the Environment,"Natural Science,Sustainability"
+ALS,5106,Food and the Environment,Natural Science
 FNR,5335,Agroforestry,Natural Science
-FOR,5161,Forest Productivity & Health,Natural Science
+FOR,5161,Forest Productivity and Health,Natural Science
 FOR,6340,Physiology of Forest Trees,Natural Science
 GEO,5809,Geography of World Agriculture,Natural Science
 WIS,6934,Topics in Wildlife and Range Sciences: Wildlife and Agriculture,Natural Science
-ABE,5646,Biological and Agricultural Systems Simulation,"Natural Science,Research & Design"
+ABE,5646,Biological and Agricultural Systems Simulation,Natural Science
 ABE,5663,Advanced Applied Microbial Biotechnology,Natural Science
 CHM,5224,Basic Principles for Organic Chemistry,Natural Science
 CHM,5235,Organic Spectroscopy,Natural Science
 CHM,5275,The Organic Chemistry of Polymers,Natural Science
 CHM,6154,Chemical Separations,Natural Science
-EES,5245,Water Quality Analysis,"Natural Science,Research & Design"
+EES,5245,Water Quality Analysis,Natural Science
 EES,5305C,Ecological and General Systems,Natural Science
-EES,6007,Advanced Energy & Environment,"Natural Science,Sustainability"
-EES,6145,Environmental Meteorology & Oceanography,Natural Science
+EES,6145,Environmental Meteorology and Oceanography,Natural Science
 EES,6208,Principles of Water Chemistry I,Natural Science
 EES,6225,Atmospheric Chemistry,Natural Science
 EES,6405,Environmental Toxicology,Natural Science
 ENV,6508,Wetland Hydrology,Natural Science
-ENV,6932,Special Problems in ENV: Stormwater Control Systems,Natural Science
+ENV,6932,Special Problems in Environmental Engineering: Stormwater Control Systems,Natural Science
 FAS,6171,Applied Phycology,Natural Science
-FAS,6932,Special Topics in FAS: Fish and Water Quality,Natural Science
+FAS,6932,Special Topics in Fisheries and Aquatic Sciences: Fish and Water Quality,Natural Science
 GEO,6255,Climatology,Natural Science
 GEO,6938,Selected Topics in Geography: Fluvial Morphology,Natural Science
 GEO,6938,Selected Topics in Geography: Land Cover Use: Land Change,Natural Science
-GIS,5306,GIS Applications in Environmental Systems,"Natural Science,Research & Design"
-GLY,6075,"Global Climate Change: Past, Present, & Future",Natural Science
-GLY,5241C,Geochemistry,Natural Science
-HOS,5711,Phytochemicals in Food and Health,Natural Science
+GIS,5306,GIS Applications in Environmental Systems,Natural Science
+GLY,5246,Geochemistry,Natural Science
+GLY,6075,"Global Climate Change: Past, Present, and Future",Natural Science
+HOS,5711,Phytochemicals in Food & Health,Natural Science
 OCP,5293,Coastal Processes,Natural Science
 OCP,6050,Physical Oceanography,Natural Science
 SWS,5605C,Environmental Soil Physics,Natural Science
 SWS,6932,Topics in Soils: Earth System Analysis,Natural Science
 SWS,6932,Topics in Soils: Environmental Biogeochemistry,Natural Science
-URP,6526,Special Topics: Geographical Genetics,Natural Science
-FOR,5615,Forest Conservation & Management Policies & Issues,Social Science
+FOR,5615,Forest Conservation and Management Policies and Issues,Social Science
 FOR,6934,Topics in Forest Resources and Conservation: Natural Resource Policy & Economics,Social Science
 FYC,6330,Theories of Community Development,Social Science
 LAS,6290,Tropical Conservation and Development,Social Science
-SYD,6517,Seminar in Environment and Society,Social Science
 SYA,7933,Special Study in Sociology: Environmental Governance,Social Science
 SYA,7933,Special Study in Sociology: Environmental Inequality and Justice,Social Science
 SYA,7933,"Special Study in Sociology: Population, Migration, and Environment",Social Science
-EVR,5705,Natural Resource Mangement and Innovation Systems,Sustainability
-ABE,5707C,Agricultural Waste Management,Sustainability
-AEB,5167,Economic Analysis in Small Farm Livelihood Systems,"Sustainability,Research & Design"
-AEB,6453,Natural Resource and Environmental Economics,Sustainability
-AEB,6933,Special Topics: Ecological Economics,"Sustainability,Research & Design"
-AEB,6933,Special Topics: Economic Development of Latin America,Sustainability
-AEC,5073,"Agriculture, Resources, People, and the Environment: A Global Perspective",Sustainability
-AEC,6512,Program Development in Extension Education,Sustainability
-AEC,6540,Agricultural and Natural Resources Communications Theory and Strategies,Sustainability
-AGR,6932,Topics in Agronomy: Agricultural and Environmental Sustainability,Sustainability
-AGR,6932,Topics in Agronomy: Sustainable Agriculture System Analysis,Sustainability
-AOM,6932,Special Topics in AOM: Principles and Issues in Environmental Hydrology,Sustainability
-ANG,5266,Economic Anthropology,Sustainability
-ANG,5303,Women & Development,Sustainability
-ANG,5702,Anthropology & Development,Sustainability
-ANG,6930,Special Topics in Anthropology: Anthropology and the New Economy,Sustainability
-ARC,6931,"Architecture, Energy, and Ecology",Sustainability
-ARC,6934,European Approach to Sustainable Design,Sustainability
-BCN,6580,High Performance Green Building Delivery System,Sustainability
-BCN,6585,Principles of Sustainable Construction,Sustainability
-BCN,6586,Construction Ecology and Metabolism,Sustainability
-BCN,6641,Construction Value Engineering,Sustainability
-EES,5307,Ecological Engineering,Sustainability
-EES,6009,Ecological Economics,Sustainability
-EES,6051,Advanced Environmental Planning & Design,Sustainability
-EML,5455,Clean Combustion Technology,Sustainability
-ENV,6932,Special Problems in ENV: Restoration Planning,Sustainability
-ENV,6932,Special Problems in ENV: Adaptive Management: Water and Watershed Systems,Sustainability
-ENV,6932,Special Problems in ENV: Green Engineering Design and Sustainability,Sustainability
-EVR,6930,Sustainable Natural Resource Management,Sustainability
-FAS,6355C,Fisheries Management,Sustainability
-FOR,5615,Forest Conservation & Managment Policies and Issues,Sustainability
-FOR,6628,Community Forest Management,Sustainability
-FOR,6934,Topics in FOR: Education for Sustainability,Sustainability
-FOR,6934,Topics in FOR: Field Skills for Forest Conservation,"Sustainability,Research & Design"
-FYC,6302,Sustainable Community Development,Sustainability
-GEA,6419,Seminar: South America,Sustainability
-GEA,6466,Seminar on Geography of Amazonia,Sustainability
-GEA,6468,Resource Utilization & Conservation in Latin America,Sustainability
-GEB,6930,Special Topics: Competitive Strategies in Sustainability,Sustainability
-GEO,6495,Environment and Behavior,Sustainability
-GEO,6938,Special Topics: Economic Principles and Tools for Conservation Managers in the Tropics,Sustainability
-GEO,6938,Special Topics: Land Use Land Cover Change,Sustainability
-GEO,6938,Special Topics: Management of Protected Areas in Africa and the Americas,Sustainability
-GEO,6938,Special Topics: Community Conservation and Rural Development in Africa,Sustainability
-ICM,6680,Principles of International Sustainable Construction,Sustainability
-INR,6039,International Political Economy,Sustainability
-LAS,6290,Interdisciplinary Research and Practice for Social-Environmental Management,Sustainability
-LAS,6291,Conservation and Development Skills: Impact of Conservation and Development Policy,Sustainability
-LAS,6291,Conservation and Development Skills: Policy Reform in Conservation and Sustainable Development,Sustainability
-LAS,6938,Seminar in LAS: Amazon Seminar,Sustainability
-LAS,6938,Seminar in LAS: Tropical Resource,Sustainability
-AFS,6905,Foundations of Economics for Sustainable Development,Sustainability
-LAS,6938,Foundations of Economics for Sustainable Development,Sustainability
-ANG,6930,Special Topics: Anthropology of Development in Latin America,Sustainability
-LAS,6938,Special Topics: Anthropology of Development in Latin America,Sustainability
-LAS,6938, People & Protected Areas,Sustainability
-LAS,6940,Sustainable Development Practice,Sustainability
-ALS,6046,Grant Writing for Master's and Doctoral Students,Research & Design
-ANG,5485,Research Design in Anthropology,Research & Design
-ANG,6091,Research Strategies in Anthropology,Research & Design
-AEC,6767,Research Strategies in Agricultural Education & Communications,Research & Design
-FNR,5608,Research Planning,Research & Design
-FYC,6221,Grant Proposals for Community-Based Organizations,Research & Design
-FYC,6800,Scientific Reasoning & Research Design,Research & Design
-LAS,6293,Design and Methods of Research in Latin American Studies,Research & Design
-WIS,5496,Research Design in Wildlife Ecology,Research & Design
-ZOO,6927,Special Topics in Zoology: Quantitative Methods & Ecological Inference,Research & Design
-ABE,5167,Economic Analysis in Small Farm Livelihood Systems,"Sustainability,Research & Design"
-ABE,6106,Microeconomic Principles & Analysis,Research & Design
-ABE,6182,Agricultural Risk Analysis & Decision Making,Research & Design
-ABE,6553,Elements of Econometrics,Research & Design
-ABE,6571,Econometric Methods I,Research & Design
-ABE,6817,Survey Research Methods for Economics,Research & Design
-ABE,6933,Special Topics: Ecological Economics,"Sustainability,Research & Design"
-AEC,6552,Evaluating Programs in Extension Education,Research & Design
-ALS,5032,Teaching in Colleges of Agricultural and Life Sciences,Research & Design
-ALS,5932,Special Topics: Ecological Statistics and Design,Research & Design
-ANG,6930,"Special Topics in Anthropology: Anthropology, GIS, and Human Ecosystems",Research & Design
-AOM,5431,GIS & Remote Sensing in Agriculture & Resources,Research & Design
-EDF,6475,Qualitative Foundations of Educational Research,Research & Design
-EDF,7483,Qualitative Data Collection,Research & Design
-ENV,6932,Special Problems in ENV: Field Methods in Adaptive Management,Research & Design
-FAS,6337C,Fish Population Dynamics,Research & Design
-FNR,5072C,Environmental Education Program Development,Research & Design
-FOR,5435,Forest Information Systems,Research & Design
-FOR,6156,Simulation Analysis of Forest Ecosystems,Research & Design
-FOR,6172C,Tropical Forestry Field Course,Research & Design
-FOR,6543,Valuation of Forest Resources,Research & Design
-FOR,6943,Advanced Topics in Forest Biometrics,Research & Design
-FYC,6802,"Advanced Research Methods for Family, Youth, and Community Sciences",Research & Design
-GIS,5009C,Advanced Cartography,Research & Design
-GIS,5028C,Advanced Air Photo Interpretation,Research & Design
-GIS,5107C,Geographic Information Systems in Research,Research & Design
-LAA,5331,Site Design Methods,Research & Design
-LAS,6291,Conservation and Development Skills,Research & Design
-LAS,6291,Communication and Leadership Skills for Development Practice,Research & Design
-LAS,6292,Tropical Conservation and Development Research Methods,Research & Design
-LAS,6938,Seminar in Modern LAS: Introduction to the Analysis of Latin American Data,Research & Design
-MET,6752,Atmospheric Data Analysis,Research & Design
-MMC,6421,Research Methods in Mass Communication,Research & Design
-PHC,6000,Epidemiology Methods I,Research & Design
-PHC,6011,Epidemiology Methods II,Research & Design
-PHC,6050C,Biostatistical Methods I,Research & Design
-PHC,6102,Introduction to Public Health Administrative Systems,Research & Design
-PHC,6146,Public Health Program Planning and Evaluation,Research & Design
-PHC,6251,Assessment and Surveillance in Public Health,Research & Design
-PHC,6700,Social and Behavioral Research Methods,Research & Design
-POS,6157,Community Analysis,Research & Design
-POS,6757,Survey Research,Research & Design
-SCE,6XXX,Environmental Education Methods and Materials,Research & Design
-SWS,5721C,GIS in Land Resource Management,Research & Design
-SWS,6722C,Soil-Landscape Modeling,Research & Design
-SUR,5365,Digital Mapping,Research & Design
-SUR,5385,Remote Sensing Applications,Research & Design
-SUR,5425,Cadastral Information Systems,Research & Design
-SUR,5525,Least Squares Adjustment Computations,Research & Design
-SUR,6375,Terrain Analysis and Mapping,Research & Design
-STA,5106,Computer Programs in Statistical Analysis,Research & Design
-STA,5223,Applied Sample Survey Methods,Research & Design
-STA,5325,Fundamentals of Probability,Research & Design
-STA,5507,Applied Nonparametric Methods,Research & Design
-STA,5701,Applied Multivariate Methods,Research & Design
-STA,6126,Statistical Methods in Social Research I,Research & Design
-STA,6127,Statistical Methods in Social Research II,Research & Design
-STA,6166,Statistical Methods in Research I,Research & Design
-STA,6167,Statistical Methods in Research II,Research & Design
-STA,6176,Introduction to Biostatistics,Research & Design
-STA,6178,Genetic Data Analysis,Research & Design
-STA,6209,Design and Analysis of Experiments,Research & Design
-STA,6226,Sampling Theory and Applications,Research & Design
-STA,6526,Nonparametric Statistics,Research & Design
-STA,6934,Special Topics in Statistics: Statistical Ecology,Research & Design
-SYA,6407,Quantitative Research Methods,Research & Design
-SWS,5424C,Soil Chemical Analysis,Research & Design
-SWS,6373,Techniques in Microbial Ecology,Research & Design
-URP,6231,Quantitative Data Analysis for Planners,Research & Design
-URP,6270,Survey of Planning & Information Systems,Research & Design
-URP,6271,Planning Information Systems,Research & Design
-URP,6272,Spatial Analysis for Planners,Research & Design
-URP,6274,GPS for Planners,Research & Design
-URP,6275,Spatial Database Design & Development,Research & Design
-URP,6905,Exploration and Directed Study: Image Processing,Research & Design
-VME,6607,Human Health Risk Assessment,Research & Design
-WIS,6934,Biometry,Research & Design
-ZOO,6308,Dynamic Optimization Modeling in Behavioral and Evolutionary Ecology,Research & Design
-ZOO,6927,Special Topics in Zoology: Statistical Principles for the Biological Sciences,Research & Design
-ZOO,6927,Special Topics in Zoology: Quantitative Methods in Ecology,Research & Design
-ZOO,6927,Special Topics in Zoology: Ecological Modeling of Data,Research & Design
+SYD,6517,Seminar in Environment and Society,Social Science
+LAW,6298,International Trade and Environment,Social Science
+LAW,6460,Florida Land Use Law,Social Science
+LAW,6460,Land Use Planning & Control,Social Science
+LAW,6465,Conservation Clinic,Social Science
+LAW,6470,Environmental Law,Social Science
+LAW,6472,Natural Resources Law,Social Science
+LAW,6474,Agricultural Law,Social Science
+LAW,6492,Water Law,Social Science
+LAW,6930,Wetlands and Watersheds,Social Science
+LAW,6930,Seminar in Techniques of Growth Management,Social Science
+LAW,6930,Seminar on Coastal Zone Management,Social Science
+LAW,6936,Environmental Justice Seminar,Social Science
+ARC,6399,Advanced Topics in Urban Design,Social Science
+AEC,6300,Methodology of Planned Change,Social Science
+EES,6051,Advanced Environmental Planning and Design,Social Science
+FAS,6355C,Fisheries Management,Social Science
+FOR,6665,Landscape Planning for Ecotourism,Social Science
+GEO,5605,Advanced Urban Geography,Social Science
+TTE,5006,Advanced Urban Transportation Planning,Social Science
+URP,6421,Environmental Impact Statements,Social Science
+URP,6716,Transportation Policy and Planning,Social Science
+AEB,6933,Special Topics: Natural Resource and Environmental Policy,Social Science
+AEC,5073,"Agriculture, Resources, People, and the Environment: A Global Perspective",Social Science
+AEC,6316,From America to Zimbabwe: An Overview of International Extension Systems,Social Science
+ANG,6273,Legal Anthropology,Social Science
+ANG,6274,Principles of Political Anthropology,Social Science
+BOT,6927/LAW,Advances in Botany: Comparative Forest Management & Policy,Social Science
+CPO,6795,Environmental Politics,Social Science
+CPO,6796,Water Politics,Social Science
+EES,5415,Environmental Health,Social Science
+ENV,5075,Environmental Policy,Social Science
+ENV,6932,Special Problems in Environmental Engineering: Adaptive Management: People and Policy,Social Science
+ENV,6932,Special Problems in Environmental Engineering: Global Environmental Policies and Institutions,Social Science
+ENV,6932,Special Problems in Environmental Engineering: Environmental Institutions and Regulations,Social Science
+ENV,6932,Special Problems in Environmental Engineering: Natural Resource and Environmental Policy,Social Science
+GEO,6938,Selected Topics in Geography: African Agriculture and Resources,Social Science
+GEO,6938,Selected Topics in Geography: Management of Protected Areas in Africa and the Americas,Social Science
+GEO,6938,Selected Topics in Geography: Community Conservation and Rural Development in Africa,Social Science
+INR,6039,International Political Economy,Social Science
+INR,6352,International Environmental Relations,Social Science
+LAA,6382,Ecological and Environmental Policy,Social Science
+LAS,6291,Conservation and Development Skills: Policy Reform in Conservation and Sustainable Development,Social Science
+LAS,6291,Conservation and Development Skills: Communication and Leadership Skills for Development Practice,Social Science
+MAN,6636,Global Strategic Management,Social Science
+PAD,6865,Development Administration,Social Science
+PHC,6313,Environmental Health Concepts in Public Health,Social Science
+PUP,6006,Policy Evaluation,Social Science
+PUP,6007,Policy Process,Social Science
+PUP,6009,Public Policy Analysis,Social Science
+PUP,6015,Comparative Policy Analysis,Social Science
+WIS,6544,Administration in Natural Resources,Social Science
+EDF,6215,Educational Psychology: Learning Theory,Social Science
+FNR,5072C,Environmental Education Program Development,Social Science
+FOR,6005,Conservation Behavior,Social Science
+MMC,6409,Science/Health Communication,Social Science
+WIS,6525,Environmental Interpretation,Social Science
+WIS,6578,Human Dimensions of Biological Conservation,Social Science
+AEB,5167,Economic Analysis in Small Farm Livelihood Systems,Social Science
+AEB,6413,Ecological Economics: Theory and Applications,Social Science
+AEB,6453,Natural Resource and Environmental Economics,Social Science
+AEB,6483,Seminar in Natural Resource and Environmental Economics,Social Science
+AEB,6933,Special Topics: International Humanitarian Assistance,Social Science
+EES,6009,Ecological Economics,Social Science
+FOR,6543,Natural Resource Economics and Valuation,Social Science
+LAS,6938,Seminar in Modern Latin American Studies: Foundations of Economic Analysis for Sustainable Development,Social Science
+FOR,6934,Special Topics: Ethics of Sustainability,Social Science
+PHI,5405,Philosophy of Science,Social Science
+PHI,5425,Philosophy of Social Science,Social Science
+PHI,5665,Ethical Theory,Social Science
+REL,5195,"Topics in Religion and Society: Religion, Ethics, and Nature",Social Science
+REL,5195,Topics in Religion and Society: Values and Practice,Social Science
+REL,6185,"Topics in Religion and Society: Religion, Nature, and Society",Social Science
+REL,6167,Radical Environmentalism,Social Science
+WIS,6934,Topics in Wildlife and Range Sciences: Philosophical Basis of Biodiversity Loss,Social Science
+AEB,6182,Agricultural Risk Analysis and Decision Making,Social Science
+AEC,6512,Program Development in Extension Education,Social Science
+AEC,6552,Evaluating Programs in Extension Education,Social Science
+ALS,5932,Special Topics,Social Science
+ANG,5266,Economic Anthropology,Social Science
+ANG,5354,Anthropology of Modern Africa,Social Science
+ANG,5531,Culture and Nutrition,Social Science
+ANG,5700,Applied Anthropology,Social Science
+ANG,6110,Archaeological Theory,Social Science
+ANG,6286,Seminar in Contemporary Theory: The Politics of Nature,Social Science
+ANG,6930,"Special Topics in Anthropology: Health, Contamination, and Culture",Social Science
+FYC,6422,Policy Issues and Case Studies in Nonprofit Organizations,Social Science
+FYC,6620,Program Planning and Evaluation for Human Service Delivery,Social Science
+FYC,6932,"Topics in Family, Youth, and Community Sciences: Community Organizing & Practice",Social Science
+GEO,6495,Environment and Behavior,Social Science
+GEO,6558,Geography of Inequality in Africa,Social Science
+GEO,6931,Seminar in Cultural and Political Ecology,Social Science
+LAS,6938,Seminar in Modern Latin American Studies: Anthropology of Development in Latin America,Social Science
+LEI,6108,Contemporary Theories of Recreation and Leisure,Social Science
+LEI,6895,Tourism Theory and Concepts,Social Science
+SYD,6636,Latin American Development,Social Science
+WST,6935,"Special Topics in Women's Studies: Gender, Development, and Globalization",Social Science
+ANG,5164,The Inca and Their Ancestors,Social Science
+ANG,5255,Rural Peoples in the Modern World,Social Science
+ANG,5310,The North American Indian,Social Science
+ANG,5323,Peoples of Mexico and Central America,Social Science
+ANG,5330,The Tribal People of Lowland South America,Social Science
+ANG,5331,Peoples of the Andes,Social Science
+ANG,5336,The Peoples of Brazil,Social Science
+ANG,5352,Peoples of Africa,Social Science
+ANG,6930,Special Topics in Anthropology: Plants and Culture,Social Science
+LAH,5607,History of Amazonia,Social Science
+LAH,5934,Topics in Latin American History: History of Nature in the Americas,Social Science
