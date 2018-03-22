@@ -1,7 +1,7 @@
 #The term schedule that gets displayed. Can do multiple terms in the case of displaying
 #summer and fall at the same time
 #Term codes are YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
-termNames=['201806']
+termNames=['201806', '201808']
 
 majorTemplate='in/majorPage.html.mako'
 
@@ -19,6 +19,7 @@ majors=[
 #prettyName: the more comprehendable name. eg. Fall 2015
 #termSchedule: the filename for the downloaded csv file for the schedule. All should be semesterData/YYYYXX.csv
 terms=[
+     {'name' :'201808', 'prettyName':'Fall 2018', 'termSchedule': 'semesterData/201808.csv'}, 
      {'name' :'201806', 'prettyName':'Summer 2018', 'termSchedule': 'semesterData/201806.csv'}, 
      {'name' :'201801', 'prettyName':'Spring 2018', 'termSchedule': 'semesterData/201801.csv'}, 
      {'name' :'201708', 'prettyName':'Fall 2017', 'termSchedule': 'semesterData/201708.csv'}, 
