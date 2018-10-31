@@ -49,7 +49,8 @@ terms=[
 relevantDepts=['BOT','ZOO','FAS','WIS','FOR','GEO','ENV']
 
 #Exclude any classes with these titles. Designed for research credits which I don't need to have on the site
-classTitleExclusions=['SUPERVISED RESEARCH','MASTERS RESEARCH','DOCTORAL RESEARCH','ADVANCED RESEARCH']
+classTitleExclusions=['SUPERVISED RESEARCH','MASTERS RESEARCH','DOCTORAL RESEARCH','ADVANCED RESEARCH',
+                      'SUPERVISED TEACHING','INDIVIDUAL WORK','INDIVIDUAL STUDIES','SPECIAL TOPICS']
 
 #Every dept has 'Special Topic' codes that are not necessarily in the curriculum. 
 #Since they all share the same course codes with things thare *are* in the curriclum, 

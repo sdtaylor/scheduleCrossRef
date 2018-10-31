@@ -8,14 +8,14 @@
         <meta name="author" content="">
         <title>Simple UF Grad Student Schedule</title>
         <!-- Bootstrap core CSS + datables integration -->
-        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/schedule/static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/schedule/static/dataTables.bootstrap.min.css">
         <!-- Custom styles for this template -->
         <link href="index.css" rel="stylesheet">
         <!-- JS libraries for bootstrap and datatables -->
-	<script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/schedule/static/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/schedule/static/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/schedule/static/dataTables.bootstrap.min.js"></script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
