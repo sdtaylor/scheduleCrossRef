@@ -1,5 +1,6 @@
 import urllib.request as urllib
 from bs4 import BeautifulSoup as bs
+import unicodedata
 import pandas as pd
 import os
 
@@ -22,22 +23,15 @@ if os.path.exists(classListFile):
 
 pageSoup=bs(urllib.urlopen(baseURL), 'lxml')
 
+
+# deal with unicode
+def convert_u(t):
+    return unicodedata.normalize('NFKD', t)
+
 ################################################
 # functions defining different html sections for
 # use with beautifulsoup
 
-def is_div_row(tag):
-    return tag.name=='div' and 'class' in tag.attrs and 'row' in tag.attrs['class']
-
-# A div element for one of the 6 class catagories. They are <div class='row'
-# and contain the text defined above
-def is_catagory_section(tag):
-    if is_div_row(tag):
-        title = tag.find('h3')
-        if title:
-            return title.text in catagories.html_title.tolist()
-    else:
-        return False
 
 # Class rows are 'tr' elements with exactly 4 'td' elements
 def is_class_listing(tag):
@@ -50,13 +44,13 @@ def is_class_listing(tag):
 # Primary scraping code
 class_list = []
 
-for catagory_section in pageSoup.find_all(is_catagory_section):
-    html_title = catagory_section.find('h3').text
+for catagory_section in pageSoup.find_all('table'):
+    html_title = convert_u(catagory_section.find('h3').text)
     subCatagory = catagories['subCatagory'][catagories.html_title==html_title].tolist()[0]
     
     for class_listing in catagory_section.find_all(is_class_listing):
-        prefix_and_number = class_listing.find_all('td')[0].text
-        title = class_listing.find_all('td')[1].text.strip()
+        prefix_and_number = convert_u(class_listing.find_all('td')[0].text)
+        title = convert_u(class_listing.find_all('td')[1].text).strip()
         
         prefix = prefix_and_number.split(' ')[0].strip()
         number = prefix_and_number.split(' ')[1].strip()
