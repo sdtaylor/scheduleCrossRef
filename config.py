@@ -1,6 +1,5 @@
 #The term schedule that gets displayed. Can do multiple terms in the case of displaying
-#summer and fall at the same time
-#Term codes are YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
+#summer and fall at the same time. ie termNames ['2201','2208']
 termNames=['2201']
 
 majorTemplate='in/majorPage.html.mako'
@@ -15,7 +14,7 @@ majors=[
 ]
 
 #Add new semesters here.
-#Name: the code for the year and semester. YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
+#Name: The term code, see below. 
 #prettyName: the more comprehendable name. eg. Fall 2015
 #termSchedule: the filename for the downloaded csv file for the schedule. All should be semesterData/YYYYXX.csv
 #
