@@ -1,111 +1,94 @@
-import urllib.request as urllib
-from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os.path
-from config import *
-
-baseURL='http://www.registrar.ufl.edu/soc/'
+import config
+from pyUFAPI import UFScheduleAPIClient
 
 #if you add or subtract columns then you need to adjust the getClassList function accordingly
 #xxxx2 are for when there is a 2nd row with more schedule info. For labs, meeting times in different buildings, etc.
-columns=['coursePrefix','courseNum','fee','section','credits','days','times','building','room','title','prof',
+columns=['coursePrefix','courseNum','fee','section','credits','prof','title',
+         'days','times','building','room',
          'days2','times2','building2','room2']
 
-
-def getDepts(url):
-    #for each semester's beginning schedule page, get a list of all dept sub pages
-    #with actual classes on them
-    pageHTML=urllib.urlopen(url)
-    pageSoup=bs(urllib.urlopen(url), 'lxml')
-    deptPages=[]
-    for thisRow in pageSoup.find_all('table')[0].find_all('option'):
-        #The 1st entry for these isn't something we want
-        if thisRow.attrs['value']:
-            deptPages.append(thisRow.attrs['value'])
-    return(deptPages)
+class_api = UFScheduleAPIClient()
 
 
-def getClassList(url):
-    #accepts a url for a specific dept/semester and extracts all classes from it. 
-    #returns a pandas DF
-    pageHTML=urllib.urlopen(url)
-    pageSoup=bs(urllib.urlopen(url), 'lxml')
-
-    courseList=pd.DataFrame(columns=columns)
-
-    for thisRow in pageSoup.find_all('table')[1].find_all('tr'):
-        #Skip the beginning few rows which are header info
-        if len(thisRow)!=22:
-            continue
-        #Get a list of all 'td' (which corrospond to columns)
-        #and pull out relevant info from each
-        thisRow=thisRow.find_all('td')
-
-        #The 1st entry is like "WIS 6934", so split those up to be more usefull
-        first=thisRow[0].get_text().split(' ')
-
-        #if the the 1st entry is empty then this row is extra info from the prior row.
-        #append the date information to the previous entry and move on
-        if len(first)==1:
-            #Index for the previous row is just the length -1
-            priorRow=courseList.shape[0]-1
-
-            courseList.loc[priorRow,'days2']=thisRow[7].get_text().strip()
-            courseList.loc[priorRow,'times2']=thisRow[8].get_text()
-            courseList.loc[priorRow,'building2']=thisRow[9].get_text()
-            courseList.loc[priorRow,'room2']=thisRow[10].get_text()
-
-            continue
-
-        #If row is a new class append it to a new row in the DF using a dict
-        rowData={}
-        rowData['coursePrefix']=first[0]
-        rowData['courseNum']=first[1]
-
-        rowData['fee']=thisRow[1].get_text()
-        rowData['section']=thisRow[5].get_text().replace('\n','') #section #'s all have annoying newlines
-        rowData['credits']=thisRow[6].get_text().strip() #get rid of leading spaces
-        rowData['days']=thisRow[7].get_text().strip()
-        rowData['times']=thisRow[8].get_text()
-        rowData['building']=thisRow[9].get_text()
-        rowData['room']=thisRow[10].get_text()
-        rowData['title']=thisRow[12].get_text().replace('\n','') #get rid of newlines
-        rowData['prof']=thisRow[13].get_text().replace('\n','',1).replace('\n',';')
-                                                                 #get rid of newlines but keep a seperater between
-                                                                 #multiple profs
-
-        
-        courseList=courseList.append(rowData, ignore_index=True)
-
-    return(courseList)
-
-#Check that a semesters class list is downloaded, if not go and get it
-#If you want to re-download a semester (like for updated classes), then 
-#just delete that one in the local folder
-for thisSemester in terms:
-    dataFile=thisSemester['termSchedule']
-    if os.path.exists(dataFile):
-        print('Semester data file exists, skipping: ',dataFile)
-        continue
-
-    #Get all the dept subpages of schedules, process each and add to
-    #a large dataframe for this semester.
-    semesterURL=baseURL+thisSemester['name']+'/all/'
-    deptList=getDepts(semesterURL)
-    semesterCourseList=pd.DataFrame(columns=columns)
-    for thisDept in deptList:
-        deptURL=semesterURL+thisDept
-        try:
-            semesterCourseList=semesterCourseList.append( getClassList(deptURL), ignore_index=True)
-        #Continue on if it's just a 404 error, otherwise halt
-        except urllib.HTTPError as err:
-            if err.code ==404:
-                print('page not found', deptURL)
-                continue
+def get_meeting_info(api_meet_times, meet_number):
+    info = {'days':None,
+            'times':None,
+            'building':None,
+            'room':None}
+    
+    if len(api_meet_times)>0:
+        matching_info = [t for t in api_meet_times if t['meetNo'] == meet_number]
+        if len(matching_info)>0:
+            
+            # Save just the period number if it's a single period, or the range if it's multiple.
+            if matching_info[0]['meetPeriodBegin'] == matching_info[0]['meetPeriodEnd']:
+                times = matching_info[0]['meetPeriodBegin']
             else:
-                raise
+                times = '{p1}-{p2}'.format(p1 = matching_info[0]['meetPeriodBegin'], p2=matching_info[0]['meetPeriodEnd'])
+                
+            info['days'] = ','.join(matching_info[0]['meetDays'])
+            info['times'] = times
+            info['building'] = matching_info[0]['meetBuilding']
+            info['room'] = matching_info[0]['meetRoom']
 
+    return info
+
+def format_profs(api_instructor_list):
+    return ','.join([entry['name'] for entry in api_instructor_list])
+
+for this_semester in config.terms:
+    data_file = this_semester['termSchedule']
+    if os.path.exists(data_file):
+        print('Semester data file exists, skipping: ',data_file)
+        continue
+    
+    class_api = UFScheduleAPIClient(default_term = this_semester['name'],
+                                    default_category = 'RES')
+    
+    semester_course_list=pd.DataFrame(columns=columns)
+    
+    for major in config.majors:
+        major_class_list = pd.read_csv(major['classFile'])
+        
+        
+        for course in major_class_list.to_dict('records'):
+            full_course_code = course['coursePrefix'] + course['courseNum']
+            course_api_output = class_api.get_course_info(course = full_course_code)
+            
+            print(full_course_code, course_api_output['course_found'])
+            
+            if course_api_output['course_found']:
+                for unique_course in course_api_output['course_info']:
+                    for api_section_info in unique_course['sections']:
+                        
+                        course_info = {}
+                        
+                        course_info['coursePrefix'] = course['coursePrefix']
+                        course_info['courseNum']    = course['courseNum']
+                        course_info['fee']          = api_section_info['courseFee']
+                        course_info['section']      = api_section_info['classNumber']
+                        course_info['credits']      = api_section_info['credits']
+                        course_info['title']      = unique_course['name']
+                        course_info['prof']      = format_profs(api_section_info['instructors'])
+                        
+                        section_time_info1 = get_meeting_info(api_section_info['meetTimes'], 1)
+                        section_time_info2 = get_meeting_info(api_section_info['meetTimes'], 2)
+
+                        course_info['days'] = section_time_info1['days']
+                        course_info['times'] = section_time_info1['times']
+                        course_info['building'] = section_time_info1['building']
+                        course_info['room'] = section_time_info1['room']
+                        course_info['days2'] = section_time_info2['days']
+                        course_info['times2'] = section_time_info2['times']
+                        course_info['building2'] = section_time_info2['building']
+                        course_info['room2'] = section_time_info2['room']
+                
+                        semester_course_list = semester_course_list.append(course_info, ignore_index=True)
+
+    # no need to list things twice. This is especially prevalent for special topic classes
+    semester_course_list = semester_course_list.drop_duplicates()
     
     #write semester data frame
-    semesterCourseList.to_csv(dataFile, index=False)
-
+    semester_course_list.to_csv(data_file, index=False)

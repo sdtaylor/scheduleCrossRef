@@ -187,8 +187,8 @@ GEO,6938,Selected Topics in Geography: Community Conservation and Rural Developm
 INR,6039,International Political Economy,"Social Science,Sustainability"
 INR,6352,International Environmental Relations,Social Science
 LAA,6382,Ecological and Environmental Policy,Social Science
-LAS,6291,Conservation and Development Skills: Policy Reform in Conservation and Sustainable Development,"Social Science,Sustainability"
-LAS,6291,Conservation and Development Skills: Communication and Leadership Skills for Development Practice,Social Science
+LAS,6291,Conservation and Development Skills: Policy Reform in Conservation and Sustainable Development," "
+LAS,6291,Conservation and Development Skills: Communication and Leadership Skills for Development Practice," "
 MAN,6636,Global Strategic Management,Social Science
 PAD,6865,Development Administration,Social Science
 PHC,6313,Environmental Health Concepts in Public Health,"Social Science,Sustainability"
@@ -288,7 +288,7 @@ GEB,6930,Special Topics: Competitive Strategies in Sustainability,Sustainability
 GEO,6938,Selected Topics in Geography: Economic Principles and Tools for Conservation Managers in the Tropics,Sustainability
 GEO,6938,Selected Topics in Geography: Land Use Land Cover Change,Sustainability
 ICM,6680,Principles of International Sustainable Construction,Sustainability
-LAS,6291,Conservation and Development Skills: Impact of Conservation and Development Policy,Sustainability
+LAS,6291,Conservation and Development Skills: Impact of Conservation and Development Policy," "
 LAS,6938,Seminar in Modern Latin American Studies: Amazon Seminar,Sustainability
 LAS,6938,Seminar in Modern Latin American Studies: Tropical Resource,Sustainability
 LAS,6938/AFS,Foundations of Economics for Sustainable Development,Sustainability
@@ -319,9 +319,9 @@ VME,6605,Toxic Substances,Sustainability
 VME,6606,Ecological Risk Assessment,Sustainability
 VME,6607,Human Health Risk Assessment,"Sustainability,Research & Design"
 AEC,5454,Leadership Development for Extension and Community Nonprofit Organizations,Sustainability
-LAS,6291,Conservation and Development Skills: Conflict and Collaboration Management,Sustainability
-LAS,6291,Conservation and Development Skills: Conservation Entrepreneurship,Sustainability
-LAS,6291,Conservation and Development Skills: Facilitation Skills for Collaboration Management,Sustainability
+LAS,6291,Conservation and Development Skills: Conflict and Collaboration Management," "
+LAS,6291,Conservation and Development Skills: Conservation Entrepreneurship," "
+LAS,6291,Conservation and Development Skills: Facilitation Skills for Collaboration Management," "
 POS,6157,Community Analysis,"Sustainability,Research & Design"
 DCP,6931,"Special Topics in Design, Construction, and Planning",Sustainability
 URP,6341,Urban Planning Project: Advanced Landscape Architectural Design,Sustainability
@@ -358,8 +358,8 @@ GIS,5009C,Advanced Cartography,Research & Design
 GIS,5028C,Advanced Aerial Photo Interpretation,Research & Design
 GIS,5107C,Geographic Information Systems in Research,Research & Design
 LAA,5331,Site Design Methodologies,Research & Design
-LAS,6291,Conservation and Development Skills,Research & Design
-LAS,6291,Communication and Leadership Skills for Development Practice,Research & Design
+LAS,6291,Conservation and Development Skills," "
+LAS,6291,Communication and Leadership Skills for Development Practice," "
 LAS,6292,Tropical Conservation and Development Research Methods,Research & Design
 LAS,6938,Seminar in Modern Latin American Studies: Introduction to the Analysis of Latin American Data,Research & Design
 MET,6752,Spatial Analysis of Atmospheric Data Using GIS,Research & Design

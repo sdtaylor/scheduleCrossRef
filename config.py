@@ -1,7 +1,7 @@
 #The term schedule that gets displayed. Can do multiple terms in the case of displaying
 #summer and fall at the same time
 #Term codes are YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
-termNames=['201906','201908']
+termNames=['2201']
 
 majorTemplate='in/majorPage.html.mako'
 
@@ -18,7 +18,13 @@ majors=[
 #Name: the code for the year and semester. YYYYXX, where XX is 01 for spring, 08 for fall, and 06 for summer
 #prettyName: the more comprehendable name. eg. Fall 2015
 #termSchedule: the filename for the downloaded csv file for the schedule. All should be semesterData/YYYYXX.csv
+#
+#The new API started being the sole source in spring 2020. With that term codes are:
+#  CYYM, where C = 2, YY = the last 2 digits of the year, and M is 8 or 1 for fall or spring
+#
+#TODO: New codes for Summer. Its special since it has several mini-terms.
 terms=[
+     {'name' :'2201',   'prettyName':'Spring 2020', 'termSchedule': 'semesterData/spring2020.csv'}, 
      {'name' :'201908', 'prettyName':'Fall 2019', 'termSchedule': 'semesterData/201908.csv'}, 
      {'name' :'201906', 'prettyName':'Summer 2019', 'termSchedule': 'semesterData/201906.csv'}, 
      {'name' :'201901', 'prettyName':'Spring 2019', 'termSchedule': 'semesterData/201901.csv'}, 
