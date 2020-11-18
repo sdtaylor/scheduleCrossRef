@@ -1,6 +1,6 @@
 #The term schedule that gets displayed. Can do multiple terms in the case of displaying
 #summer and fall at the same time. ie termNames ['2201','2208']
-termNames=['2201']
+termNames=['2211']
 
 majorTemplate='in/majorPage.html.mako'
 
@@ -23,6 +23,8 @@ majors=[
 #
 #TODO: New codes for Summer. Its special since it has several mini-terms.
 terms=[
+     {'name' :'2211',   'prettyName':'Spring 2021', 'termSchedule': 'semesterData/spring2021.csv'}, 
+     {'name' :'2208',   'prettyName':'Fall 2020', 'termSchedule': 'semesterData/fall2020.csv'}, 
      {'name' :'2201',   'prettyName':'Spring 2020', 'termSchedule': 'semesterData/spring2020.csv'}, 
      {'name' :'201908', 'prettyName':'Fall 2019', 'termSchedule': 'semesterData/201908.csv'}, 
      {'name' :'201906', 'prettyName':'Summer 2019', 'termSchedule': 'semesterData/201906.csv'}, 
